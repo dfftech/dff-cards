@@ -1,19 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'dff-card-dw',
   template: `
-    <p>
+    <div class='card-dw'>
       card-dw works!
-    </p>
+    </div>
   `,
-  styles: []
+  styles: [`.card-dw{}`]
 })
 export class CardDwComponent implements OnInit {
-
+  @Input() inputData; @Output() outputEmitter: EventEmitter<any> = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
   }
-
+  onCardSelect() { if(this.inputData && this.inputData.data){ this.outputEmitter.emit(this.inputData.data)}}
 }

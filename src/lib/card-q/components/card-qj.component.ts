@@ -1,19 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'dff-card-qj',
   template: `
-    <p>
+    <div class='card-qj'>
       card-qj works!
-    </p>
+    </div>
   `,
-  styles: []
+  styles: [`.card-qj{}`]
 })
 export class CardQjComponent implements OnInit {
-
+  @Input() inputData; @Output() outputEmitter: EventEmitter<any> = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
   }
-
+  onCardSelect() { if(this.inputData && this.inputData.data){ this.outputEmitter.emit(this.inputData.data)}}
 }
