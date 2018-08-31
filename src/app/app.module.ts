@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { CardsModule } from '../lib/public_api';
+import { CardAModule } from '../lib/public_api';
 
 @NgModule({
   declarations: [
@@ -10,7 +10,7 @@ import { CardsModule } from '../lib/public_api';
   ],
   imports: [
     BrowserModule,
-    CardsModule
+    CardAModule
   ],
   providers: [],
   bootstrap: [AppComponent]
