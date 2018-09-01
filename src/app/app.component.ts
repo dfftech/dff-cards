@@ -50,17 +50,15 @@ export class AppComponent {
   cardBbData = {
     title: "banner",
     img:
-      "https://d38y6a0t4hqpxx.cloudfront.net/images/devops-cover-digital-lync.png",
-    video: "https://www.youtube.com/watch?v=JQmAn9eNtNI&t=12s"
+      "https://d38y6a0t4hqpxx.cloudfront.net/images/devops-cover-digital-lync.png"
   };
 
   cardBcData = {
     title: "Events at Digital Lync.",
     img:
       "https://d38y6a0t4hqpxx.cloudfront.net/images/data-science-digital-lync.png",
-    description:
-      "Talk to industry leaders and know real facts. Clear your queries and walk out with a career decision.Do attend our workshops and seminars. Let us meet up!",
-    video: "https://www.youtube.com/watch?v=JQmAn9eNtNI&t=12s"
+    summary:
+      "Talk to industry leaders and know real facts. Clear your queries and walk out with a career decision.Do attend our workshops and seminars. Let us meet up!"
   };
 
   cardAcData = {
