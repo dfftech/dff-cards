@@ -3,13 +3,45 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'dff-card-ae',
   template: `
-    <div class='card-ae'>
-      card-ae works!
+    <div [class]='dir == "left" ? "card-ae" : "card-ae-reverse"' (click)="onCardSelect()" *ngIf="inputData">
+    <div   [style.borderLeft]=" dir == 'left' ?  '2px solid ' + inputData.borderColor : '' " [style.borderRight]=" dir == 'right' ?  '2px solid ' + inputData.borderColor : '' " >
+    <img [src]="inputData.img" alt="" [style.height]="inputData.height" style="padding:1em"> 
+    </div>
+    <div>
+      <h3>{{inputData.name}}</h3>
+      <hr style="margin: 8px 0px"/>
+      <p *ngFor="let pitem of inputData.pList">{{pitem}}</p>
+    </div>
     </div>
   `,
-  styles: [`.card-ae{}`]
+  styles: [`.card-ae{
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    justify-content: space-around;
+    flex-direction:row;
+    padding: 1em;
+   
+  }
+  .card-ae > * {
+    text-align: center;
+  }
+  .card-ae-reverse{
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    justify-content: space-around;
+    flex-direction:row-reverse;
+    padding: 1em;
+  }
+  .card-ae-reverse > * {
+    text-align: center;
+  }
+  }
+  `]
 })
 export class CardAeComponent implements OnInit {
+  @Input() dir: any = "left";
   @Input() inputData; @Output() outputEmitter: EventEmitter<any> = new EventEmitter();
   constructor() { }
 
