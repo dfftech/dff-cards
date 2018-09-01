@@ -3,7 +3,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 @Component({
   selector: "dff-card-aa",
   template: `
-    <div class='card-aa' [style.height]="inputData.height" (click)="onCardSelect()">
+    <div class='card-aa' [style.height]="inputData.height" (click)="onCardSelect()" *ngIf="inputData">
       <div class="img-box">
         <img [src]="inputData.img">
       </div>
@@ -63,6 +63,10 @@ export class CardAaComponent implements OnInit {
   inputData: any = {};
   @Output()
   outputEmitter: EventEmitter<any> = new EventEmitter();
+
+  @Input()
+  dir: string = "left";
+
   constructor() {}
 
   ngOnInit() {}

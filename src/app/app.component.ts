@@ -4,18 +4,9 @@ import { Component } from "@angular/core";
   selector: "dff-root",
   template: `
     <dff-card-aa [inputData]="cardAaData"></dff-card-aa>
+    <dff-card-ab [inputData]="cardAbData"></dff-card-ab>
   `,
-  styles: [
-    `
-      h2 {
-        font-size: 1em !important;
-        -webkit-margin-before: 0em !important;
-        -webkit-margin-after: 0em !important;
-        -webkit-margin-start: 0px !important;
-        -webkit-margin-end: 0px !important;
-      }
-    `
-  ]
+  styles: [``]
 })
 export class AppComponent {
   title = "dff-cards";
@@ -29,5 +20,13 @@ export class AppComponent {
     data: {
       id: 1
     }
+  };
+  cardAbData = {
+    name: "card-ab.",
+    summary:
+      "Upon successful completion of the course, candidates can choose their career as:",
+    img:
+      "https://digital-lync.com/assets/images/courses/devopscourse/linux-digital-lync.svg",
+    imgAlt: "DevOps"
   };
 }
