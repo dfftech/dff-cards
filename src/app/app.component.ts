@@ -1,22 +1,20 @@
 import { Component } from "@angular/core";
-import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
+import {
+  DomSanitizer,
+  SafeResourceUrl,
+  SafeUrl
+} from "@angular/platform-browser";
 
 @Component({
   selector: "dff-root",
   template: `
-
-  
-    <dff-card-bc [inputData]="cardBcData"></dff-card-bc>
-
     <dff-card-aa [inputData]="cardAaData"></dff-card-aa>
     <dff-card-ac [inputData]="cardAcData" dir="left"></dff-card-ac>
     <dff-card-ae [inputData]="cardAeData" dir="left"></dff-card-ae>
     <dff-card-ad [inputData]="cardAdData"></dff-card-ad>
     <dff-card-ab [inputData]="cardAbData"></dff-card-ab>
   `,
-  styles: [`
-  
-  `]
+  styles: [``]
 })
 export class AppComponent {
   title = "dff-cards";
@@ -40,75 +38,72 @@ export class AppComponent {
     imgAlt: "DevOps"
   };
 
-
-
   cardBaData = {
     title: "banner",
-    subTitle:"Classroom & Online",
-    video:"https://s3.ap-south-1.amazonaws.com/dl-web-assets/Digital_Lync_Landing_Page_Video.mp4",
-    videoPoster:"https://s3.ap-south-1.amazonaws.com/dl-web-assets/Digital_Lync_Landing_Page_Video.mp4"
+    subTitle: "Classroom & Online",
+    video:
+      "https://s3.ap-south-1.amazonaws.com/dl-web-assets/Digital_Lync_Landing_Page_Video.mp4",
+    videoPoster:
+      "https://s3.ap-south-1.amazonaws.com/dl-web-assets/Digital_Lync_Landing_Page_Video.mp4"
   };
 
   cardBbData = {
     title: "banner",
-    img:"https://d38y6a0t4hqpxx.cloudfront.net/images/devops-cover-digital-lync.png",
-    video:"https://www.youtube.com/watch?v=JQmAn9eNtNI&t=12s"
+    img:
+      "https://d38y6a0t4hqpxx.cloudfront.net/images/devops-cover-digital-lync.png",
+    video: "https://www.youtube.com/watch?v=JQmAn9eNtNI&t=12s"
   };
 
   cardBcData = {
     title: "Events at Digital Lync.",
-    img:"https://d38y6a0t4hqpxx.cloudfront.net/images/data-science-digital-lync.png",
-    description:"Talk to industry leaders and know real facts. Clear your queries and walk out with a career decision.Do attend our workshops and seminars. Let us meet up!",
-    video:"https://www.youtube.com/watch?v=JQmAn9eNtNI&t=12s"
+    img:
+      "https://d38y6a0t4hqpxx.cloudfront.net/images/data-science-digital-lync.png",
+    description:
+      "Talk to industry leaders and know real facts. Clear your queries and walk out with a career decision.Do attend our workshops and seminars. Let us meet up!",
+    video: "https://www.youtube.com/watch?v=JQmAn9eNtNI&t=12s"
   };
-}
 
   cardAcData = {
     name: "card-ac",
     height: "300px",
     summary:
       "The JOSU Product is a skill matching job portal platform for students, employers and colleges. Employers can add jobs and find a right match for the positions using JOSU. Students can find a right place to work with their skill set and can even undergo trainings in new advanced technologies to increase the scope of finding best job in the market. Colleges can collaborate with Digital Lync and place their students in top MNC’s after proper training in required skill set.",
-    img:
-      "https://www.digital-lync.com/assets/images/josulogo.svg",
+    img: "https://www.digital-lync.com/assets/images/josulogo.svg",
     imgAlt: "DevOps"
   };
   cardAeData = {
     name: "card-ae",
     height: "100px",
-    borderColor:"red",
+    borderColor: "red",
 
     img:
       "https://www.digital-lync.com/assets/images/courses/devopscourse/clock.png",
     imgAlt: "DevOps",
-    pList: [
-      "9 Weeks",
-      "5 Hours/Week"
-    ]
+    pList: ["9 Weeks", "5 Hours/Week"]
   };
   cardAdData = {
-
     img: "https://d38y6a0t4hqpxx.cloudfront.net/images/devops-digital-lync.png",
     name: "card-ad",
     height: "300px",
     bg: "blue",
     data: {
-    id: 1
+      id: 1
     },
     views: {
-    img : this.secureImg("data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZGF0YS1wcmVmaXg9ImZhcyIgZGF0YS1pY29uPSJleWUiIGNsYXNzPSJzdmctaW5saW5lLS1mYSBmYS1leWUgZmEtdy0xOCIgcm9sZT0iaW1nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NzYgNTEyIj48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik01NjkuMzU0IDIzMS42MzFDNTEyLjk2OSAxMzUuOTQ5IDQwNy44MSA3MiAyODggNzIgMTY4LjE0IDcyIDYzLjAwNCAxMzUuOTk0IDYuNjQ2IDIzMS42MzFhNDcuOTk5IDQ3Ljk5OSAwIDAgMCAwIDQ4LjczOUM2My4wMzEgMzc2LjA1MSAxNjguMTkgNDQwIDI4OCA0NDBjMTE5Ljg2IDAgMjI0Ljk5Ni02My45OTQgMjgxLjM1NC0xNTkuNjMxYTQ3Ljk5NyA0Ny45OTcgMCAwIDAgMC00OC43Mzh6TTI4OCAzOTJjLTc1LjE2MiAwLTEzNi02MC44MjctMTM2LTEzNiAwLTc1LjE2MiA2MC44MjYtMTM2IDEzNi0xMzYgNzUuMTYyIDAgMTM2IDYwLjgyNiAxMzYgMTM2IDAgNzUuMTYyLTYwLjgyNiAxMzYtMTM2IDEzNnptMTA0LTEzNmMwIDU3LjQzOC00Ni41NjIgMTA0LTEwNCAxMDRzLTEwNC00Ni41NjItMTA0LTEwNGMwLTE3LjcwOCA0LjQzMS0zNC4zNzkgMTIuMjM2LTQ4Ljk3M2wtLjAwMS4wMzJjMCAyMy42NTEgMTkuMTczIDQyLjgyMyA0Mi44MjQgNDIuODIzczQyLjgyNC0xOS4xNzMgNDIuODI0LTQyLjgyM2MwLTIzLjY1MS0xOS4xNzMtNDIuODI0LTQyLjgyNC00Mi44MjRsLS4wMzIuMDAxQzI1My42MjEgMTU2LjQzMSAyNzAuMjkyIDE1MiAyODggMTUyYzU3LjQzOCAwIDEwNCA0Ni41NjIgMTA0IDEwNHoiPjwvcGF0aD48L3N2Zz4="),
-    count : "545"
+      img: this.secureImg(
+        "data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZGF0YS1wcmVmaXg9ImZhcyIgZGF0YS1pY29uPSJleWUiIGNsYXNzPSJzdmctaW5saW5lLS1mYSBmYS1leWUgZmEtdy0xOCIgcm9sZT0iaW1nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NzYgNTEyIj48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik01NjkuMzU0IDIzMS42MzFDNTEyLjk2OSAxMzUuOTQ5IDQwNy44MSA3MiAyODggNzIgMTY4LjE0IDcyIDYzLjAwNCAxMzUuOTk0IDYuNjQ2IDIzMS42MzFhNDcuOTk5IDQ3Ljk5OSAwIDAgMCAwIDQ4LjczOUM2My4wMzEgMzc2LjA1MSAxNjguMTkgNDQwIDI4OCA0NDBjMTE5Ljg2IDAgMjI0Ljk5Ni02My45OTQgMjgxLjM1NC0xNTkuNjMxYTQ3Ljk5NyA0Ny45OTcgMCAwIDAgMC00OC43Mzh6TTI4OCAzOTJjLTc1LjE2MiAwLTEzNi02MC44MjctMTM2LTEzNiAwLTc1LjE2MiA2MC44MjYtMTM2IDEzNi0xMzYgNzUuMTYyIDAgMTM2IDYwLjgyNiAxMzYgMTM2IDAgNzUuMTYyLTYwLjgyNiAxMzYtMTM2IDEzNnptMTA0LTEzNmMwIDU3LjQzOC00Ni41NjIgMTA0LTEwNCAxMDRzLTEwNC00Ni41NjItMTA0LTEwNGMwLTE3LjcwOCA0LjQzMS0zNC4zNzkgMTIuMjM2LTQ4Ljk3M2wtLjAwMS4wMzJjMCAyMy42NTEgMTkuMTczIDQyLjgyMyA0Mi44MjQgNDIuODIzczQyLjgyNC0xOS4xNzMgNDIuODI0LTQyLjgyM2MwLTIzLjY1MS0xOS4xNzMtNDIuODI0LTQyLjgyNC00Mi44MjRsLS4wMzIuMDAxQzI1My42MjEgMTU2LjQzMSAyNzAuMjkyIDE1MiAyODggMTUyYzU3LjQzOCAwIDEwNCA0Ni41NjIgMTA0IDEwNHoiPjwvcGF0aD48L3N2Zz4="
+      ),
+      count: "545"
     },
-    share : {
-    img : this.secureImg("data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZGF0YS1wcmVmaXg9ImZhcyIgZGF0YS1pY29uPSJzaGFyZS1hbHQiIGNsYXNzPSJzdmctaW5saW5lLS1mYSBmYS1zaGFyZS1hbHQgZmEtdy0xNCIgcm9sZT0iaW1nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0zNTIgMzIwYy0yMi42MDggMC00My4zODcgNy44MTktNTkuNzkgMjAuODk1bC0xMDIuNDg2LTY0LjA1NGE5Ni41NTEgOTYuNTUxIDAgMCAwIDAtNDEuNjgzbDEwMi40ODYtNjQuMDU0QzMwOC42MTMgMTg0LjE4MSAzMjkuMzkyIDE5MiAzNTIgMTkyYzUzLjAxOSAwIDk2LTQyLjk4MSA5Ni05NlM0MDUuMDE5IDAgMzUyIDBzLTk2IDQyLjk4MS05NiA5NmMwIDcuMTU4Ljc5IDE0LjEzIDIuMjc2IDIwLjg0MUwxNTUuNzkgMTgwLjg5NUMxMzkuMzg3IDE2Ny44MTkgMTE4LjYwOCAxNjAgOTYgMTYwYy01My4wMTkgMC05NiA0Mi45ODEtOTYgOTZzNDIuOTgxIDk2IDk2IDk2YzIyLjYwOCAwIDQzLjM4Ny03LjgxOSA1OS43OS0yMC44OTVsMTAyLjQ4NiA2NC4wNTRBOTYuMzAxIDk2LjMwMSAwIDAgMCAyNTYgNDE2YzAgNTMuMDE5IDQyLjk4MSA5NiA5NiA5NnM5Ni00Mi45ODEgOTYtOTYtNDIuOTgxLTk2LTk2LTk2eiI+PC9wYXRoPjwvc3ZnPg=="),
-    count: "545"
+    share: {
+      img: this.secureImg(
+        "data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZGF0YS1wcmVmaXg9ImZhcyIgZGF0YS1pY29uPSJzaGFyZS1hbHQiIGNsYXNzPSJzdmctaW5saW5lLS1mYSBmYS1zaGFyZS1hbHQgZmEtdy0xNCIgcm9sZT0iaW1nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0zNTIgMzIwYy0yMi42MDggMC00My4zODcgNy44MTktNTkuNzkgMjAuODk1bC0xMDIuNDg2LTY0LjA1NGE5Ni41NTEgOTYuNTUxIDAgMCAwIDAtNDEuNjgzbDEwMi40ODYtNjQuMDU0QzMwOC42MTMgMTg0LjE4MSAzMjkuMzkyIDE5MiAzNTIgMTkyYzUzLjAxOSAwIDk2LTQyLjk4MSA5Ni05NlM0MDUuMDE5IDAgMzUyIDBzLTk2IDQyLjk4MS05NiA5NmMwIDcuMTU4Ljc5IDE0LjEzIDIuMjc2IDIwLjg0MUwxNTUuNzkgMTgwLjg5NUMxMzkuMzg3IDE2Ny44MTkgMTE4LjYwOCAxNjAgOTYgMTYwYy01My4wMTkgMC05NiA0Mi45ODEtOTYgOTZzNDIuOTgxIDk2IDk2IDk2YzIyLjYwOCAwIDQzLjM4Ny03LjgxOSA1OS43OS0yMC44OTVsMTAyLjQ4NiA2NC4wNTRBOTYuMzAxIDk2LjMwMSAwIDAgMCAyNTYgNDE2YzAgNTMuMDE5IDQyLjk4MSA5NiA5NiA5NnM5Ni00Mi45ODEgOTYtOTYtNDIuOTgxLTk2LTk2LTk2eiI+PC9wYXRoPjwvc3ZnPg=="
+      ),
+      count: "545"
     }
-    };
-    constructor(private sanitizer: DomSanitizer){
-
-    }
-    secureImg(img: any){
-      return this.sanitizer.bypassSecurityTrustResourceUrl(img);
-    }
+  };
+  constructor(private sanitizer: DomSanitizer) {}
+  secureImg(img: any) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(img);
   }
-
-
+}
