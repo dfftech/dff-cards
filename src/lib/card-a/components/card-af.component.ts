@@ -1,7 +1,7 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 
 @Component({
-  selector: 'dff-card-af',
+  selector: "dff-card-af",
   template: `
     <div class='card-af' (click)="onCardSelect()" *ngIf="inputData">
     <div class="success">
@@ -11,28 +11,36 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 </div>
     </div>
   `,
-  styles: [`.card-af{
-    display: flex;
-    flex-wrap: wrap;
-  justify-content: center;
-  align-content: space-between;
-  padding-bottom: 50px;
-  }
-  .card-af > div {
-    margin: 10px;
-    text-align: center;
-    
-  }
-  .success p{
-    text-align: center;
-  }
-  `]
+  styles: [
+    `
+      .card-af {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: space-between;
+        padding-bottom: 50px;
+      }
+      .card-af > div {
+        margin: 10px;
+        text-align: center;
+      }
+      .success p {
+        text-align: center;
+      }
+    `
+  ]
 })
 export class CardAfComponent implements OnInit {
-  @Input() inputData; @Output() outputEmitter: EventEmitter<any> = new EventEmitter();
-  constructor() { }
+  @Input()
+  inputData;
+  @Output()
+  outputEmitter: EventEmitter<any> = new EventEmitter();
+  constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+  onCardSelect() {
+    if (this.inputData && this.inputData.data) {
+      this.outputEmitter.emit(this.inputData.data);
+    }
   }
-  onCardSelect() { if(this.inputData && this.inputData.data){ this.outputEmitter.emit(this.inputData.data)}}
 }
