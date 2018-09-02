@@ -12,6 +12,10 @@ import {
     <dff-card-ac [inputData]="cardAcData" dir="left"></dff-card-ac>
     <dff-card-ae [inputData]="cardAeData" dir="left"></dff-card-ae>
     <dff-card-ad [inputData]="cardAdData"></dff-card-ad>
+    <dff-card-af [inputData]="cardAfData"></dff-card-af>
+    <dff-card-ba [inputData]="cardBaData"></dff-card-ba>
+    <dff-card-bb [inputData]="cardBbData"></dff-card-bb>
+    <dff-card-bc [inputData]="cardBcData"></dff-card-bc>
     <dff-card-ab [inputData]="cardAbData"></dff-card-ab>
   `,
   styles: [``]
@@ -99,6 +103,11 @@ export class AppComponent {
       ),
       count: "545"
     }
+  };
+  cardAfData = {
+    img: "http://localhost:4200/assets/allimages/courses/devopscourse/career-guidance.svg",
+    name: "card-aa",
+    title:"card-aa",
   };
   constructor(private sanitizer: DomSanitizer) {}
   secureImg(img: any) {

@@ -3,7 +3,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'dff-card-ba',
   template: `
-  <div class="homepage-hero-module" id="vcont">
+  <div class="homepage-hero-module" id="vcont" >
   <div class="video-container">
     <div class="title-container Aligner">
         <div class="container Aligner-item xxx" style="position: relative;z-index:9;margin: auto;">
