@@ -8,15 +8,44 @@ import {
 @Component({
   selector: "dff-root",
   template: `
+
+
+  <div style="boder: 1px solid #ccc">
+    <h2> card-aa </h2>
     <dff-card-aa [inputData]="cardAaData"></dff-card-aa>
-    <dff-card-ac [inputData]="cardAcData" dir="left"></dff-card-ac>
-    <dff-card-ae [inputData]="cardAeData" dir="left"></dff-card-ae>
-    <dff-card-ad [inputData]="cardAdData"></dff-card-ad>
-    <dff-card-af [inputData]="cardAfData"></dff-card-af>
-    <dff-card-ba [inputData]="cardBaData"></dff-card-ba>
-    <dff-card-bb [inputData]="cardBbData"></dff-card-bb>
-    <dff-card-bc [inputData]="cardBcData"></dff-card-bc>
+  </div>
+
+    <h2> card-ab </h2>
     <dff-card-ab [inputData]="cardAbData"></dff-card-ab>
+
+    <h2> card-ac </h2>
+    <dff-card-ac [inputData]="cardAcData"></dff-card-ac>
+
+
+    <h2> card-ad </h2>
+    <dff-card-ad [inputData]="cardAdData"></dff-card-ad>
+
+    <h2> card-ae </h2>
+    <dff-card-ae [inputData]="cardAeData" dir="left"></dff-card-ae>
+
+    
+
+
+  <h2> card-af </h2>
+    <dff-card-af [inputData]="cardAfData"></dff-card-af>
+
+    <h2> card-ba </h2>
+    <dff-card-ba [inputData]="cardBaData"></dff-card-ba>
+
+    <h2> card-bb </h2>
+    <dff-card-bb [inputData]="cardBbData"></dff-card-bb>
+
+    <h2> card-bc </h2>
+    <dff-card-bc [inputData]="cardBcData"></dff-card-bc>
+
+    <h2> card-bd </h2>
+    <dff-card-bd [inputData]="cardBaData"></dff-card-bd>
+
   `,
   styles: [``]
 })
@@ -105,9 +134,10 @@ export class AppComponent {
     }
   };
   cardAfData = {
-    img: "http://localhost:4200/assets/allimages/courses/devopscourse/career-guidance.svg",
+    img:
+      "http://localhost:4200/assets/allimages/courses/devopscourse/career-guidance.svg",
     name: "card-aa",
-    title:"card-aa",
+    title: "card-aa"
   };
   constructor(private sanitizer: DomSanitizer) {}
   secureImg(img: any) {
