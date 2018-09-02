@@ -4,16 +4,20 @@ import { Component, OnInit } from "@angular/core";
   selector: "dff-card-b",
   template: `
   <h2> card-ba </h2>
+  <p> {{cardBaData | json }} </p>
   <dff-card-ba [inputData]="cardBaData"></dff-card-ba>
 
   <h2> card-bb </h2>
+  <p> {{cardBbData | json }} </p>
   <dff-card-bb [inputData]="cardBbData"></dff-card-bb>
 
   <h2> card-bc </h2>
+  <p> {{cardBcData | json }} </p>
   <dff-card-bc [inputData]="cardBcData"></dff-card-bc>
 
   <h2> card-bd </h2>
-  <dff-card-bd [inputData]="cardBaData"></dff-card-bd>
+  <p> {{cardBdData | json }} </p>
+  <dff-card-bd [inputData]="cardBdData"></dff-card-bd>
   `,
   styles: []
 })

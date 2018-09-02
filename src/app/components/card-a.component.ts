@@ -15,19 +15,24 @@ import {
   </div>
 
     <h2> card-ab </h2>
+    <p> {{cardAbData | json }} </p>
     <dff-card-ab [inputData]="cardAbData"></dff-card-ab>
 
     <h2> card-ac </h2>
+    <p> {{cardAcData | json }} </p>
     <dff-card-ac [inputData]="cardAcData"></dff-card-ac>
 
 
     <h2> card-ad </h2>
+    <p> {{cardAdData | json }} </p>
     <dff-card-ad [inputData]="cardAdData"></dff-card-ad>
 
     <h2> card-ae </h2>
+    <p> {{cardAeData | json }} </p>
     <dff-card-ae [inputData]="cardAeData" dir="left"></dff-card-ae>
 
     <h2> card-af </h2>
+    <p> {{cardAfData | json }} </p>
     <dff-card-af [inputData]="cardAfData"></dff-card-af>
   `,
   styles: []
