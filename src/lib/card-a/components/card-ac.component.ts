@@ -4,7 +4,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   selector: 'dff-card-ac',
   template: `
     <div [class]='dir == "left" ? "card-ac" : "card-ac-reverse"' (click)="onCardSelect()" [style.height]="inputData.height" *ngIf="inputData">
-    <div>
+    <div class="ibox">
       <img [src]="inputData.img" alt="">    
     </div>
     <div class="box">
@@ -40,6 +40,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   @media screen and (max-width: 480px) {
     .card-ac{
       flex-direction: column-reverse;
+    }
+    .ibox img{
+      height:200px;
+      width:200px;
     }
     .card-ac-reverse{
       flex-direction: column-reverse;

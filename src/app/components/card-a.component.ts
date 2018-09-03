@@ -20,7 +20,7 @@ import {
 
     <h2> card-ac </h2>
     <p> {{cardAcData | json }} </p>
-    <dff-card-ac [inputData]="cardAcData"></dff-card-ac>
+    <dff-card-ac [inputData]="cardAcData" dir ="left"></dff-card-ac>
 
 
     <h2> card-ad </h2>
