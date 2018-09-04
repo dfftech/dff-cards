@@ -38,13 +38,16 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   .card-ca-reverse > * {
     text-align: center;
   }  
+  .card-ca h3{
+    padding: 0.5em 0;
+  }
   @media screen and (max-width: 500px) {
     .card-ca{
       flex-direction: column-reverse;
     }
     .ibox img{
       height:200px;
-      width:auto;
+      width:200px;
     }
     .card-ca-reverse{
       flex-direction: column-reverse;
