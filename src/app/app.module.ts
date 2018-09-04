@@ -3,23 +3,27 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
 import { AppComponent } from "./app.component";
-import { CardAModule, CardBModule } from "../lib/public_api";
+import { CardAModule, CardBModule, CardCModule} from "../lib/public_api";
 import { CardAComponent } from "./components/card-a.component";
 import { CardBComponent } from "./components/card-b.component";
+import { CardCComponent } from "./components/card-c.component";
+
 
 const appRoutes: Routes = [
   { path: "", component: CardAComponent },
   { path: "card-a", component: CardAComponent },
-  { path: "card-b", component: CardBComponent }
+  { path: "card-b", component: CardBComponent },
+  { path: "card-c", component: CardCComponent }
 ];
 
 @NgModule({
-  declarations: [AppComponent, CardAComponent, CardBComponent],
+  declarations: [AppComponent, CardAComponent, CardBComponent,CardCComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     CardAModule,
-    CardBModule
+    CardBModule,
+    CardCModule
   ],
   providers: [],
   bootstrap: [AppComponent]

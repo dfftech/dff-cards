@@ -9,6 +9,8 @@ import { Component } from "@angular/core";
     <a routerLink="/card-a" routerLinkActive="active">card-a</a>
     &nbsp; &nbsp;
     <a routerLink="/card-b" routerLinkActive="active">card-b</a>
+    &nbsp; &nbsp;
+    <a routerLink="/card-c" routerLinkActive="active">card-c</a>
   </nav>
 <hr/>
 <router-outlet></router-outlet>

@@ -3,17 +3,61 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'dff-card-ca',
   template: `
-    <div class='card-ca'>
-      card-ca works!
-    </div>
+  <div [class]='dir == "left" ? "card-ca" : "card-ca-reverse"' (click)="onCardSelect()"  *ngIf="inputData">
+  <div class="ibox">
+    <img [src]="inputData.img" alt="inputData.imgAlt" [style.height]="inputData.height" >    
+  </div>
+  <div class="box" [style.width]="inputData.width">
+      <h3>{{inputData.name}} </h3>
+      <p> {{inputData.summary}}</p>
+  </div>
+
+  </div>
   `,
-  styles: [`.card-ca{}`]
+  styles: [`.card-ca{
+    display: flex;
+    position: relative;
+    align-items: center;
+    align-content: space-between;
+    justify-content: space-around;
+    flex-direction:row;
+    padding: 1em;
+  }
+  .card-ca > * {
+    text-align: center;
+  }
+  
+  .card-ca-reverse{
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    justify-content: space-around;
+    padding: 1em;    
+    flex-direction:row-reverse;
+  }
+  .card-ca-reverse > * {
+    text-align: center;
+  }  
+  @media screen and (max-width: 500px) {
+    .card-ca{
+      flex-direction: column-reverse;
+    }
+    .ibox img{
+      height:200px;
+      width:auto;
+    }
+    .card-ca-reverse{
+      flex-direction: column-reverse;
+    }
+  }
+  `]
 })
 export class CardCaComponent implements OnInit {
+  @Input() dir: any = "left";
   @Input() inputData; @Output() outputEmitter: EventEmitter<any> = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
   }
-  onCardSelect() { if(this.inputData && this.inputData.data){ this.outputEmitter.emit(this.inputData.data)}}
+  onCardSelect() { if (this.inputData && this.inputData.data) { this.outputEmitter.emit(this.inputData.data) } }
 }

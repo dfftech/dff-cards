@@ -74,10 +74,10 @@ export class CardAComponent implements OnInit {
 
   cardAcData = {
     name: "card-ac",
-    height: "300px",
+    height:"300px",
     summary:
       "The JOSU Product is a skill matching job portal platform for students, employers and colleges. Employers can add jobs and find a right match for the positions using JOSU. Students can find a right place to work with their skill set and can even undergo trainings in new advanced technologies to increase the scope of finding best job in the market. Colleges can collaborate with Digital Lync and place their students in top MNC’s after proper training in required skill set.",
-    img: "https://www.digital-lync.com/assets/images/josulogo.svg",
+    img: "https://www.digital-lync.com/assets/images/courses/devopscourse/project-digital-lync.png",
     imgAlt: "DevOps"
   };
   cardAeData = {
