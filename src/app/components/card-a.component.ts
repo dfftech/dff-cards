@@ -8,16 +8,33 @@ import {
 @Component({
   selector: "dff-card-a",
   template: `
-  <div style="boder: 1px solid #ccc">
-    <h2> card-aa </h2>
-    <p> {{cardAaData | json }} </p>
-    <dff-card-aa [inputData]="cardAaData"></dff-card-aa>
+
+  <div style="width: 100%">
+      <h2> card-aa </h2>
+    <div style="width: 50%; float: right">
+      <dff-card-aa [inputData]="cardAaData"></dff-card-aa>
+    </div>
+    <div style="width: 50%">
+      <div [innerHTML]="cardAaData | prettyprint"></div>
+    </div>
   </div>
 
-    <h2> card-ab </h2>
-    <p> {{cardAbData | json }} </p>
-    <dff-card-ab [inputData]="cardAbData"></dff-card-ab>
+  <br/>
 
+  <div style="width: 100%">
+
+      <h2> card-ab </h2>
+      <div style="width: 50%; float: right">
+      <dff-card-ab [inputData]="cardAbData"></dff-card-ab>
+      </div>
+
+      <div style="width: 50%">
+      <div [innerHTML]="cardAbData | prettyprint"></div>
+    </div>
+
+  </div>
+
+  <br/>
     <h2> card-ac </h2>
     <p> {{cardAcData | json }} </p>
     <dff-card-ac [inputData]="cardAcData" dir ="left"></dff-card-ac>
@@ -35,7 +52,18 @@ import {
     <p> {{cardAfData | json }} </p>
     <dff-card-af [inputData]="cardAfData"></dff-card-af>
   `,
-  styles: []
+  styles: [
+    `
+      h3 {
+        display: block;
+        font-size: 1.17em;
+        -webkit-margin-before: 0em !important;
+        -webkit-margin-after: 0em !important;
+        -webkit-margin-start: 0px !important;
+        -webkit-margin-end: 0px !important;
+      }
+    `
+  ]
 })
 export class CardAComponent implements OnInit {
   constructor(private sanitizer: DomSanitizer) {}
@@ -74,10 +102,11 @@ export class CardAComponent implements OnInit {
 
   cardAcData = {
     name: "card-ac",
-    height:"300px",
+    height: "300px",
     summary:
       "The JOSU Product is a skill matching job portal platform for students, employers and colleges. Employers can add jobs and find a right match for the positions using JOSU. Students can find a right place to work with their skill set and can even undergo trainings in new advanced technologies to increase the scope of finding best job in the market. Colleges can collaborate with Digital Lync and place their students in top MNC’s after proper training in required skill set.",
-    img: "https://www.digital-lync.com/assets/images/courses/devopscourse/project-digital-lync.png",
+    img:
+      "https://www.digital-lync.com/assets/images/courses/devopscourse/project-digital-lync.png",
     imgAlt: "DevOps"
   };
   cardAeData = {

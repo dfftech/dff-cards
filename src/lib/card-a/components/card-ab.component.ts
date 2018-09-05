@@ -12,7 +12,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
           </div>
           <div class="carda  slideInLeft Aligner">
             <div class="Aligner-item">
-              <h3 style="text-align: center; padding: 1em 0em;">{{inputData.name}}</h3>
+              <h3>{{inputData.name}}</h3>
               <p>{{inputData.summary}}</p>
             </div>
           </div>
@@ -57,6 +57,17 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
         top: 25px;
       }
       @media only screen and (min-width: 320px) and (max-width: 500px) {
+      }
+      .card-ab h3 {
+        margin: 0px;
+        padding: 1em 0;
+        font-weight: 500;
+        text-align: center;
+      }
+      .card-ab p {
+        line-height: 24px;
+        padding: 0.5em;
+        text-align: left;
       }
     `
   ]

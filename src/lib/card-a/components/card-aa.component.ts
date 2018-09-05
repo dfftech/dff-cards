@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
         <img [src]="inputData.img">
       </div>
       <div class="box">
-          <h3 style="text-align: center">{{inputData.name}}</h3>
+          <h3>{{inputData.name}}</h3>
           <p>{{inputData.summary}}
       </div>
     </div>
@@ -45,15 +45,16 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
         width: 100%;
         height: 100px;
       }
-      .card-aa .box p {
-        font-size: 12px;
+      .card-aa h3 {
+        margin: 0px;
+        padding: 1em 0;
+        font-weight: 500;
         text-align: center;
       }
-      .card-aa .box h3 {
-        -webkit-margin-before: 0em;
-        -webkit-margin-after: 0em;
-        -webkit-margin-start: 0px;
-        -webkit-margin-end: 0px;
+      .card-aa p {
+        line-height: 24px;
+        padding: 0.5em;
+        text-align: center;
       }
     `
   ]

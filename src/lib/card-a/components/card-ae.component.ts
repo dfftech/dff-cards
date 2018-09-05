@@ -1,7 +1,7 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 
 @Component({
-  selector: 'dff-card-ae',
+  selector: "dff-card-ae",
   template: `
     <div [class]='dir == "left" ? "card-ae" : "card-ae-reverse"' (click)="onCardSelect()" *ngIf="inputData">
     <div   [style.borderLeft]=" dir == 'left' ?  '2px solid ' + inputData.borderColor : '' " [style.borderRight]=" dir == 'right' ?  '2px solid ' + inputData.borderColor : '' " >
@@ -14,13 +14,14 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
     </div>
     </div>
   `,
-  styles: [`.card-ae{
+  styles: [
+    `.card-ae{
     display: flex;
     align-items: center;
     align-content: space-between;
     justify-content: space-around;
     flex-direction:row;
-    padding: 1em;
+
    
   }
   .card-ae > * {
@@ -32,20 +33,37 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
     align-content: space-between;
     justify-content: space-around;
     flex-direction:row-reverse;
-    padding: 1em;
+  
   }
   .card-ae-reverse > * {
     text-align: center;
   }
+  .card-ae h3 {
+    margin: 0px;
+    font-weight: 500;
+    text-align: center;
   }
-  `]
+  .card-ae p {
+    line-height: 20px;
+    text-align: center;
+  }
+  }
+  `
+  ]
 })
 export class CardAeComponent implements OnInit {
-  @Input() dir: any = "left";
-  @Input() inputData; @Output() outputEmitter: EventEmitter<any> = new EventEmitter();
-  constructor() { }
+  @Input()
+  dir: any = "left";
+  @Input()
+  inputData;
+  @Output()
+  outputEmitter: EventEmitter<any> = new EventEmitter();
+  constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+  onCardSelect() {
+    if (this.inputData && this.inputData.data) {
+      this.outputEmitter.emit(this.inputData.data);
+    }
   }
-  onCardSelect() { if(this.inputData && this.inputData.data){ this.outputEmitter.emit(this.inputData.data)}}
 }
