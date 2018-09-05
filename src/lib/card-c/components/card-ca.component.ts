@@ -54,10 +54,6 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
         .card-ca {
           flex-direction: column-reverse;
         }
-        .ibox img {
-          height: 200px;
-          width: 200px;
-        }
         .card-ca-reverse {
           flex-direction: column-reverse;
         }

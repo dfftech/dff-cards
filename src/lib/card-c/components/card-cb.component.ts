@@ -56,10 +56,6 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
         .card-cb {
           flex-direction: column-reverse;
         }
-        .ibox img {
-          height: 200px;
-          width: 200px;
-        }
         .card-cb-reverse {
           flex-direction: column-reverse;
         }
@@ -68,6 +64,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
   ]
 })
 export class CardCbComponent implements OnInit {
+  @Input()
+  dir: any = "left";
+
   @Input()
   inputData;
   @Output()
