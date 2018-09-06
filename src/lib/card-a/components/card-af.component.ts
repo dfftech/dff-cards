@@ -26,6 +26,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
       }
       .success p {
         text-align: center;
+        line-height: 24px;
       }
     `
   ]

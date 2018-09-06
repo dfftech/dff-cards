@@ -3,11 +3,11 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
 import { AppComponent } from "./app.component";
-import { CardAModule, CardBModule, CardCModule} from "../lib/public_api";
+import { CardAModule, CardBModule, CardCModule } from "../lib/public_api";
 import { CardAComponent } from "./components/card-a.component";
 import { CardBComponent } from "./components/card-b.component";
 import { CardCComponent } from "./components/card-c.component";
-
+import { PrettyPrintPipe } from "./pipe/PrettyPrintPipe";
 
 const appRoutes: Routes = [
   { path: "", component: CardAComponent },
@@ -17,7 +17,13 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, CardAComponent, CardBComponent,CardCComponent],
+  declarations: [
+    AppComponent,
+    CardAComponent,
+    CardBComponent,
+    CardCComponent,
+    PrettyPrintPipe
+  ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
