@@ -5,7 +5,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
   template: `
   <div [class]='dir == "left" ? "card-cb" : "card-cb-reverse"' (click)="onCardSelect()"  *ngIf="inputData">
   <div class="ibox">
-    <img [src]="inputData.img" alt="inputData.imgAlt" [style.height]="inputData.height" >    
+    <img [src]="inputData.img" alt="inputData.imgAlt" [style.width]="inputData.width" >    
   </div>
   <div class="box" *ngIf="inputData.hList && inputData.pList">
       <h3 *ngFor="let hitem of inputData.hList">{{hitem}} </h3>
@@ -52,12 +52,16 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
         padding: 0.5em;
         text-align: left;
       }
+      .ibox img{
+        height: auto;
+        width:100%;
+      }
       @media screen and (max-width: 500px) {
         .card-cb {
-          flex-direction: column-reverse;
+          flex-direction: column;
         }
         .card-cb-reverse {
-          flex-direction: column-reverse;
+          flex-direction: column;
         }
       }
     `

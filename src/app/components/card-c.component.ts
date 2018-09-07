@@ -11,7 +11,7 @@ import {
   <div style="boder: 1px solid #ccc">
     <h2> card-ca </h2>
     <p> {{cardCaData | json }} </p>
-    <dff-card-ca [inputData]="cardCaData"></dff-card-ca>
+    <dff-card-ca [inputData]="cardCaData" dir="left" ></dff-card-ca>
   </div>
 
 
@@ -22,7 +22,13 @@ import {
 </div>
 
   `,
-  styles: []
+  styles: [`
+  dff-card-ca > .card-ca {
+    color: red !important;
+  }
+  .card-ca  img {
+    width: 400px !important;
+  }`]
 })
 export class CardCComponent implements OnInit {
   constructor(private sanitizer: DomSanitizer) {}
@@ -34,7 +40,7 @@ export class CardCComponent implements OnInit {
 
   cardCaData = {
     name: "card-ca",
-    height: "400px",
+    width: "100%",
     summary:
       "The JOSU Product is a skill matching job portal platform for students, employers and colleges. Employers can add jobs and find a right match for the positions using JOSU. Students can find a right place to work with their skill set and can even undergo trainings in new advanced technologies to increase the scope of finding best job in the market. Colleges can collaborate with Digital Lync and place their students in top MNC’s after proper training in required skill set.",
     img:
@@ -42,7 +48,7 @@ export class CardCComponent implements OnInit {
     imgAlt: "DevOps"
   };
   cardCbData = {
-    height: "400px",
+    width: "100%",
     pList: ["Python Developer", "Flask Developer"],
     hList: [
       "It has revealed that the Python programming language is presently the most popular language for Data Scientists, Software Engineer, Research Analyst and Software Developer.",
