@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
   <div class="ibox">
     <img [src]="inputData.img" alt="inputData.imgAlt" [style.height]="inputData.height" >    
   </div>
-  <div class="box" [style.width]="inputData.width">
+  <div class="box" >
       <h3>{{inputData.name}} </h3>
       <p> {{inputData.summary}}</p>
   </div>
@@ -39,11 +39,13 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
       .card-ca-reverse > * {
         text-align: center;
       }
-      .card-ca h3 {
-        padding: 1em 0;
+      .card-ca h3,
+      .card-ca-reverse h3 {
+        padding: 1em;
         font-weight: 500;
       }
-      .card-ca p {
+      .card-ca p,
+      .card-ca-reverse p {
         line-height: 24px;
         padding: 0.5em;
         text-align: left;
@@ -51,10 +53,6 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
       @media screen and (max-width: 500px) {
         .card-ca {
           flex-direction: column-reverse;
-        }
-        .ibox img {
-          height: 200px;
-          width: 200px;
         }
         .card-ca-reverse {
           flex-direction: column-reverse;
