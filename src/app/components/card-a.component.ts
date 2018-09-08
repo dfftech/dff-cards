@@ -51,6 +51,10 @@ import {
     <h2> card-af </h2>
     <p> {{cardAfData | json }} </p>
     <dff-card-af [inputData]="cardAfData"></dff-card-af>
+
+    <h2> card-ag </h2>
+    <p> {{cardAgData | json }} </p>
+    <dff-card-ag [inputData]="cardAgData"></dff-card-ag>
   `,
   styles: [
     `
@@ -145,5 +149,10 @@ export class CardAComponent implements OnInit {
       "https://digital-lync.com/assets/images/courses/devopscourse/linux-digital-lync.svg",
     name: "card-af",
     title: "card-af"
+  };
+  cardAgData = {
+    img:"https://www.digital-lync.com/assets/images/review-google.png",
+    imgAlt:"google-plus",
+    size:"100px"
   };
 }
