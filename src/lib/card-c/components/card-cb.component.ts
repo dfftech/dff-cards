@@ -57,7 +57,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
       .ibox img {
         height: auto;
         width: 100%;
-        max-width: 320px;
+        max-width: 300px;
       }
       @media screen and (max-width: 500px) {
         .card-cb {
