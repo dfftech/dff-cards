@@ -4,14 +4,14 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
   selector: "dff-card-ca",
   template: `
   <div [class]='dir == "left" ? "card-ca" : "card-ca-reverse"' (click)="onCardSelect()"  *ngIf="inputData">
-  <div class="ibox">
-    <img [src]="inputData.img" alt="inputData.imgAlt" [style.width]="inputData.width" >    
-  </div>
-  <div class="box" >
-      <h3>{{inputData.name}} </h3>
-      <p> {{inputData.summary}}</p>
-  </div>
-
+    <div class="ibox">
+      <img [src]="inputData.img" alt="inputData.imgAlt" [style.width]="inputData.width" >    
+    </div>
+    <div class="box" >
+        <h3>{{inputData.name}} </h3>
+        <p> {{inputData.summary}}</p>
+        <button *ngIf="inputData.button" [style.background-color]="inputData.button.bg" (click)="onCardSelect()"> {{inputData.button.text}}</button>
+    </div >  
   </div>
   `,
   styles: [
@@ -25,7 +25,18 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
         flex-direction: row;
         padding: 1em;
       }
+      .card-ca button,
+      .card-ca-reverse button {
+        height: 35px;
+        border-radius: 20px;
+        background-color: #1b5683;
+        color: #fff;
+        width: 150px;
+        font-size: 16px;
+        cursor: pointer;
+      }
       .card-ca > * {
+        flex: 50%;
         text-align: center;
       }
       .card-ca-reverse {
@@ -37,6 +48,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
         flex-direction: row-reverse;
       }
       .card-ca-reverse > * {
+        flex: 50%;
         text-align: center;
       }
       .card-ca h3,
@@ -50,9 +62,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
         padding: 0.5em;
         text-align: left;
       }
-      .ibox img{
+      .ibox img {
         height: auto;
-        width:100%;
+        width: 100%;
+        max-width: 300px;
       }
       @media screen and (max-width: 500px) {
         .card-ca {

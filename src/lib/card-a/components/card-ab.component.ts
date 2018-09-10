@@ -6,9 +6,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
     <div class='card-ab' (click)="onCardSelect()" *ngIf="inputData">
         <div class="img-box">
           <div class="oval Aligner">
-              <img [alt]="inputData.imgAlt" src="{{inputData.img}}" 
-              height="80px" 
-              class="img-responsive card-image margin-auto" style=" width:100px; padding-top: 10px"/>
+              <img [alt]="inputData.imgAlt" [src]="inputData.img" 
+              class="img-responsive card-image margin-auto" style=" width:80px; height=80px;  padding-top: 10px"/>
           </div>
           <div class="carda  slideInLeft Aligner">
             <div class="Aligner-item">
@@ -60,7 +59,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
       }
       .card-ab h3 {
         margin: 0px;
-        padding: 1em 0;
+        padding: 0.5em 0;
         font-weight: 500;
         text-align: center;
       }

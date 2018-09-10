@@ -1,0 +1,18 @@
+.card-l .flex-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-l .flex-wrapper .box {
+  flex-grow: 1;
+  flex-basis: 300px;
+}
+
+.card-l .grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.card-l .grid-wrapper .box {
+}

@@ -12,6 +12,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
       <ul>
       <li *ngFor="let pitem of inputData.pList"> {{pitem}} </li>
       </ul>
+      <button *ngIf="inputData.button" [style.background-color]="inputData.button.bg" (click)="onCardSelect()"> {{inputData.button.text}}</button>
   </div>
 
   </div>
@@ -27,7 +28,18 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
         flex-direction: row;
         padding: 1em;
       }
+      .card-cb button,
+      .card-cb-reverse button {
+        height: 35px;
+        border-radius: 20px;
+        background-color: #1b5683;
+        color: #fff;
+        width: 150px;
+        font-size: 16px;
+        cursor: pointer;
+      }
       .card-cb > * {
+        flex: 50%;
         text-align: center;
       }
       .card-cb-reverse {
@@ -39,6 +51,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
         flex-direction: row-reverse;
       }
       .card-cb-reverse > * {
+        flex: 50%;
         text-align: center;
       }
       .card-cb h3,
@@ -52,9 +65,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
         padding: 0.5em;
         text-align: left;
       }
-      .ibox img{
+      .ibox img {
         height: auto;
-        width:100%;
+        width: 100%;
+        max-width: 300px;
       }
       @media screen and (max-width: 500px) {
         .card-cb {

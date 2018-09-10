@@ -4,27 +4,54 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
   selector: "dff-card-bd",
   template: `
   <div class="card-bd"> 
-  <section class='landing'>
-  <video autoplay='true' loop='true' muted='true' poster='' src='https://player.vimeo.com/external/174002664.hd.mp4?s=a9462820bdba3dee151d2ff32e4cbcebd982d77e&amp;profile_id=119&amp;oauth2_token_id=57447761'></video>
-  <div class='dim'></div>
-  <div class='text'>
-    <h1 class='animated slideInLeft'>
-      <span>Digital services don't have to be</span>
-      <br>
-      <span>"like a box of chocolates."</span>
-    </h1>
-  </div>
-</section>
+    <section class='landing'>
+    <video autoplay='true' loop='true' muted='true' poster='' [src]='inputData.video'></video>
+    <div class='dim'></div>
+    <div class='typewriter'>
+      <h1 > Digital services don't have to be </h1>
+    </div>
+  </section>
 </div>
   `,
   styles: [
     `
+      /* The typing effect */
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
+      // /* The typewriter cursor effect */
+      // @keyframes blink-caret {
+      //   from,
+      //   to {
+      //     border-color: transparent;
+      //   }
+      //   50% {
+      //     border-color: orange;
+      //   }
+      // }
+
       .card-bd {
         height: 100vh;
         width: 100%;
         margin: 0;
         color: white;
         position: relative;
+      }
+
+      .card-bd .typewriter h1 {
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: 0.15em solid orange; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: 0.15em; /* Adjust as needed */
+        animation: typing 3.5s steps(40, end),
+          blink-caret 0.75s step-end infinite;
       }
 
       .card-bd .landing {
@@ -51,10 +78,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
         z-index: -1;
         background-color: black;
       }
-      .card-bd .landing .text {
+      .card-bd .typewriter {
         position: relative;
         top: calc(50% - 2em);
-        text-align: center;
+        display: flex;
       }
     `
   ]
