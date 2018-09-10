@@ -9,7 +9,7 @@ import {
   CardBModule,
   CardCModule
 } from "../lib/public_api";
-import { CardAComponent } from "./components/card-a.component";
+// import { CardAComponent } from "./components/card-a.component";
 import { CardBComponent } from "./components/card-b.component";
 import { CardCComponent } from "./components/card-c.component";
 import { PrettyPrintPipe } from "./pipe/PrettyPrintPipe";
@@ -17,7 +17,7 @@ import { CardsComponent } from "./components/cards.component";
 
 const appRoutes: Routes = [
   { path: "", component: CardsComponent },
-  { path: "card-a", component: CardAComponent },
+  // { path: "card-a", component: CardAComponent },
   { path: "card-b", component: CardBComponent },
   { path: "card-c", component: CardCComponent }
 ];
@@ -25,7 +25,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    CardAComponent,
+    // CardAComponent,
     CardBComponent,
     CardCComponent,
     PrettyPrintPipe,

@@ -17,9 +17,17 @@ import {
       <h2> {{title}} </h2>
     </dff-card-t>
 
+    <dff-card-a>
+      <img #img [src]="imgCover">
+      <div #text>
+        <h3> {{title}} </h3>
+      </div>
+    </dff-card-a>
+
+
     <dff-card-l [inputData] = "dataList" [gap]="4" > 
       <ng-template let-ele #item> 
-      <dff-card-t shadow="true" bg="#fefdf1" dir="left">
+      <dff-card-t shadow="true" bg="#fefdf1" align="left">
             <h3 style="margin: 8px"> {{ele}} </h3>
             </dff-card-t>
       </ng-template>
@@ -48,6 +56,8 @@ import {
 export class CardsComponent implements OnInit {
   constructor(private sanitizer: DomSanitizer) {}
   title = "Application ";
+  imgCover = "https://d38y6a0t4hqpxx.cloudfront.net/images/july8-cover.jpg";
+
   secureImg(img: any) {
     return this.sanitizer.bypassSecurityTrustResourceUrl(img);
   }

@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class CardTComponent implements OnInit {
   @Input()
-  dir;
+  align;
   @Input()
   bg;
   @Input()
@@ -16,14 +16,13 @@ export class CardTComponent implements OnInit {
   maxWidth = "100%";
   @Input()
   height = "auto";
-  jc = "center";
+
   constructor() {}
 
   ngOnInit() {}
 
-  direction(val: string) {
-    console.log(this.dir);
-    switch (this.dir) {
+  AlignItems(val: string) {
+    switch (val) {
       case "left":
         return "flex-start";
       case "right":
