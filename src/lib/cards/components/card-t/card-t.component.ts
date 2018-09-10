@@ -7,13 +7,9 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class CardTComponent implements OnInit {
   @Input()
-  dir = "center";
+  dir;
   @Input()
   bg;
-  @Input()
-  margin;
-  @Input()
-  padding;
   @Input()
   shadow = false;
   @Input()
@@ -21,13 +17,12 @@ export class CardTComponent implements OnInit {
   @Input()
   height = "auto";
   jc = "center";
-  constructor() {
-    this.jc = this.direction();
-  }
+  constructor() {}
 
   ngOnInit() {}
 
-  direction() {
+  direction(val: string) {
+    console.log(this.dir);
     switch (this.dir) {
       case "left":
         return "flex-start";

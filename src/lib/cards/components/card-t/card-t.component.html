@@ -1,4 +1,4 @@
-<div [class]="shadow ? 'card-t-shadow' : 'card-t'" [style.background-color]="bg" [style.margin]="margin"
-  [style.padding]="padding" [style.maxWidth]="maxWidth" [style.height]="height" [style.justifyContent]="jc">
+<div [class]="shadow == 'true' ? 'card-t-shadow' : 'card-t'" [style.background-color]="bg" [style.maxWidth]="maxWidth"
+  [style.height]="height" [style.justifyContent]=direction(dir)>
   <ng-content></ng-content>
 </div>

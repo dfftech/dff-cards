@@ -19,8 +19,8 @@ import {
 
     <dff-card-l [inputData] = "dataList" [gap]="4" > 
       <ng-template let-ele #item> 
-      <dff-card-t shadow="true" bg="#fefdf1" >
-            <h3> {{ele}} </h3>
+      <dff-card-t shadow="true" bg="#fefdf1" dir="left">
+            <h3 style="margin: 8px"> {{ele}} </h3>
             </dff-card-t>
       </ng-template>
 
