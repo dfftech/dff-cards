@@ -1,15 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  TemplateRef,
+  ContentChild
+} from "@angular/core";
 
 @Component({
-  selector: 'dff-card-l',
-  templateUrl: './card-l.component.html',
-  styleUrls: ['./card-l.component.css']
+  selector: "dff-card-l",
+  templateUrl: "./card-l.component.html",
+  styleUrls: ["./card-l.component.css"]
 })
 export class CardLComponent implements OnInit {
+  @Input()
+  type: string = "flex";
+  @Input()
+  minFill: string = "300px";
+  @Input()
+  inputData: any[] = [];
+  @Input()
+  gap: string = "4";
 
-  constructor() { }
+  @ContentChild("item")
+  itemTmpl: TemplateRef<any>;
 
-  ngOnInit() {
-  }
+  constructor() {}
 
+  ngOnInit() {}
 }

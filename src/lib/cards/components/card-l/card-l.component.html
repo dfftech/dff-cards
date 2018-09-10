@@ -1,3 +1,7 @@
-<p>
-  card-l works!
-</p>
+<div class="card-l">
+  <div [class]="type == 'flex' ? 'flex-wrapper' : 'grid-wrapper'">
+    <div class="box" *ngFor="let item of inputData" [style.padding]="gap+'px'">
+      <ng-content select="item" *ngTemplateOutlet="itemTmpl, context: { $implicit: item }"></ng-content>
+    </div>
+  </div>
+</div>

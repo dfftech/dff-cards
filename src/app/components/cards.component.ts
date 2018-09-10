@@ -16,6 +16,17 @@ import {
     <dff-card-t shadow="true" bg="#fefdf1" maxWidth="100%">
       <h2> Testing </h2>
     </dff-card-t>
+
+    <dff-card-l [inputData] = "dataList" [gap]="4" > 
+      <ng-template let-ele #item> 
+      <dff-card-t shadow="true" bg="#fefdf1" >
+            <h3> {{ele}} </h3>
+            </dff-card-t>
+      </ng-template>
+
+       
+  
+    </dff-card-l>
   </div>
   `,
   styles: [
@@ -39,6 +50,17 @@ export class CardsComponent implements OnInit {
   secureImg(img: any) {
     return this.sanitizer.bypassSecurityTrustResourceUrl(img);
   }
-
+  dataList: any[] = [
+    "zero",
+    "one",
+    "two",
+    "three",
+    "four",
+    "five",
+    "six",
+    "seven",
+    "eight",
+    "nine"
+  ];
   ngOnInit() {}
 }
