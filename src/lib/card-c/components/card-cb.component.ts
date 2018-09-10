@@ -12,6 +12,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
       <ul>
       <li *ngFor="let pitem of inputData.pList"> {{pitem}} </li>
       </ul>
+      <button *ngIf="inputData.button" [style.background-color]="inputData.button.bg" (click)="onCardSelect()"> {{inputData.button.text}}</button>
   </div>
 
   </div>
@@ -26,6 +27,16 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
         justify-content: space-around;
         flex-direction: row;
         padding: 1em;
+      }
+      .card-cb button,
+      .card-cb-reverse button {
+        height: 35px;
+        border-radius: 20px;
+        background-color: #1b5683;
+        color: #fff;
+        width: 150px;
+        font-size: 16px;
+        cursor: pointer;
       }
       .card-cb > * {
         flex: 50%;

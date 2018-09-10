@@ -11,24 +11,27 @@ import {
   <div style="boder: 1px solid #ccc">
     <h2> card-ca </h2>
     <p> {{cardCaData | json }} </p>
-    <dff-card-ca [inputData]="cardCaData" dir="left" ></dff-card-ca>
+    <dff-card-ca [inputData]="cardCaData" dir="right" ></dff-card-ca>
   </div>
 
 
   <div style="boder: 1px solid #ccc">
   <h2> card-cb </h2>
   <p> {{cardCbData | json }} </p>
-  <dff-card-cb [inputData]="cardCbData"></dff-card-cb>
+  <dff-card-cb [inputData]="cardCbData" dir="right"></dff-card-cb>
 </div>
 
   `,
-  styles: [`
-  dff-card-ca > .card-ca {
-    color: red !important;
-  }
-  .card-ca  img {
-    width: 400px !important;
-  }`]
+  styles: [
+    `
+      dff-card-ca > .card-ca {
+        color: red !important;
+      }
+      .card-ca img {
+        width: 400px !important;
+      }
+    `
+  ]
 })
 export class CardCComponent implements OnInit {
   constructor(private sanitizer: DomSanitizer) {}
@@ -45,7 +48,11 @@ export class CardCComponent implements OnInit {
       "The JOSU Product is a skill matching job portal platform for students, employers and colleges. Employers can add jobs and find a right match for the positions using JOSU. Students can find a right place to work with their skill set and can even undergo trainings in new advanced technologies to increase the scope of finding best job in the market. Colleges can collaborate with Digital Lync and place their students in top MNC’s after proper training in required skill set.",
     img:
       "https://www.digital-lync.com/assets/images/courses/devopscourse/project-digital-lync.png",
-    imgAlt: "DevOps"
+    imgAlt: "DevOps",
+    button: {
+      text: "more",
+      bg: "red"
+    }
   };
   cardCbData = {
     width: "100%",
@@ -57,6 +64,10 @@ export class CardCComponent implements OnInit {
 
     img:
       "https://www.digital-lync.com/assets/images/courses/devopscourse/project-digital-lync.png",
-    imgAlt: "DevOps"
+    imgAlt: "DevOps",
+    button: {
+      text: "more",
+      bg: "red"
+    }
   };
 }
