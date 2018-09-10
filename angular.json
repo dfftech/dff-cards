@@ -10,8 +10,8 @@
       "prefix": "dff",
       "schematics": {
         "@schematics/angular:component": {
-          "inlineTemplate": true,
-          "inlineStyle": true
+          "inlineTemplate": false,
+          "inlineStyle": false
         }
       },
       "architect": {

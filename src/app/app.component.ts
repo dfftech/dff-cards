@@ -6,6 +6,8 @@ import { Component } from "@angular/core";
 
   <h5>{{title}}  </h5>
   <nav>
+  <a routerLink="/cards" routerLinkActive="active">cards</a>
+  &nbsp; &nbsp;
     <a routerLink="/card-a" routerLinkActive="active">card-a</a>
     &nbsp; &nbsp;
     <a routerLink="/card-b" routerLinkActive="active">card-b</a>

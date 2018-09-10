@@ -1,3 +1,4 @@
+export * from './cards/cards.module'; 
 export * from './card-a/card-a.module'; 
 export * from './card-b/card-b.module'; 
 export * from './card-c/card-c.module'; 
