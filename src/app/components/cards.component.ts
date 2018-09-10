@@ -13,7 +13,7 @@ import {
       <h2> Testing </h2>
     </dff-card-t>
 
-    <dff-card-t shadow="true" bg="#fefdf1" >
+    <dff-card-t shadow="true" bg="#fefdf1" maxWidth="100%">
       <h2> Testing </h2>
     </dff-card-t>
   </div>
