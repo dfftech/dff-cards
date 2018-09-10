@@ -14,7 +14,7 @@ import {
     </dff-card-t>
 
     <dff-card-t shadow="true" bg="#fefdf1" maxWidth="100%">
-      <h2> Testing </h2>
+      <h2> {{title}} </h2>
     </dff-card-t>
 
     <dff-card-l [inputData] = "dataList" [gap]="4" > 
@@ -47,6 +47,7 @@ import {
 })
 export class CardsComponent implements OnInit {
   constructor(private sanitizer: DomSanitizer) {}
+  title = "Application ";
   secureImg(img: any) {
     return this.sanitizer.bypassSecurityTrustResourceUrl(img);
   }
