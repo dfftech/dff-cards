@@ -17,19 +17,53 @@ import {
       <h2> {{title}} </h2>
     </dff-card-t>
 
-    <dff-card-a>
-      <img #img [src]="imgCover">
+    <dff-card-t shadow="true" bg="#fefdf1" align="center">
+      <div style="width: 25%">
+        <dff-card-a dir="left" >
+          <dff-card-i [src]="imgCover" > </dff-card-i>
+          <div #text>
+            <h3> {{title}} </h3>
+            <p> tesing products</p>
+            <p> tesing products</p>
+            <p> tesing products</p>
+          </div>
+        </dff-card-a>
+      </div>
+
+      <div style="width: 25%">
+        <dff-card-a dir="right">
+        <dff-card-i [src]="imgCover" > </dff-card-i>
+        <div #text>
+          <h3> {{title}} </h3>
+        </div>
+      </dff-card-a>
+      </div>
+
+      <div style="width: 300px">
+      <dff-card-a dir="top">
+      <dff-card-i [src]="imgCover" > </dff-card-i>
       <div #text>
         <h3> {{title}} </h3>
       </div>
     </dff-card-a>
+    </div>
+    <div style="width: 300px">
+    <dff-card-a dir="bottom">
+    <dff-card-i [src]="imgCover" > </dff-card-i>
+    <div #text>
+      <h3> {{title}} </h3>
+    </div>
+    </dff-card-a>
+    </div>
+
+    </dff-card-t>
 
 
     <dff-card-l [inputData] = "dataList" [gap]="4" > 
-      <ng-template let-ele #item> 
-      <dff-card-t shadow="true" bg="#fefdf1" align="left">
+      <ng-template let-ele #itemTempl> 
+          <dff-card-t shadow="true" bg="#fefdf1" align="left">
             <h3 style="margin: 8px"> {{ele}} </h3>
-            </dff-card-t>
+          </dff-card-t>
       </ng-template>
 
        
@@ -49,6 +83,16 @@ import {
       .dff-cards > * {
         width: 100%;
         justify-content: center;
+      }
+
+      img {
+        position: relative;
+        height: auto;
+        left: 50%;
+        -moz-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+        -webkit-transform: translate(-50%);
+        transform: translate(-50%);
       }
     `
   ]

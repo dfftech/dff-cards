@@ -1,0 +1,27 @@
+:host {
+  overflow: hidden;
+  position: relative;
+}
+
+.card-i {
+  overflow: hidden;
+  position: relative;
+}
+.card-i .img-box {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+  background: transparent;
+  border-radius: 0%;
+}
+.card-i .img-box img {
+  position: relative;
+  height: auto;
+  left: 50%;
+  top: 50%;
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+}

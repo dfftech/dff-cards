@@ -1,13 +1,14 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, ViewEncapsulation } from "@angular/core";
 
 @Component({
   selector: "dff-card-a",
   templateUrl: "./card-a.component.html",
-  styleUrls: ["./card-a.component.css"]
+  styleUrls: ["./card-a.component.css"],
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class CardAComponent implements OnInit {
   @Input()
-  dir: string = "card-a-row";
+  dir: string = "card-a-column";
   constructor() {}
 
   ngOnInit() {}
@@ -23,7 +24,7 @@ export class CardAComponent implements OnInit {
       case "bottom":
         return "card-a-column-reverse";
       default:
-        return "card-a-row";
+        return "card-a-column";
     }
   }
 }

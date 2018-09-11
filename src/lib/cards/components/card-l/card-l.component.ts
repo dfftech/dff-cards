@@ -21,7 +21,7 @@ export class CardLComponent implements OnInit {
   @Input()
   gap: string = "4";
 
-  @ContentChild("item")
+  @ContentChild("itemTempl")
   itemTmpl: TemplateRef<any>;
 
   constructor() {}

@@ -1,3 +1,6 @@
+.card-l {
+  position: relative;
+}
 .card-l .flex-wrapper {
   width: 100%;
   display: flex;

@@ -3,11 +3,13 @@
 .card-a-column,
 .card-a-column-reverse {
   display: flex;
-  width: 300px;
+  overflow: hidden;
   margin-bottom: 2px !important;
-  min-height: 48px;
+  min-height: 100px;
   align-items: center;
   justify-content: center;
+  height: 200px;
+  position: relative;
 }
 
 .card-a-row {
@@ -23,25 +25,7 @@
   flex-direction: column-reverse;
 }
 
-.card-a-row .img-box,
-.card-a-row-reverse .img-box,
-.card-a-column .img-box,
-.card-a-column-reverse .img-box {
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  overflow: hidden;
-  background: transparent;
-}
-.card-a-row,
-.card-a-row-reverse,
-.card-a-column,
-.card-a-column-reverse .img-box .img {
-  position: relative;
-  height: auto;
-  left: 50%;
-  -moz-transform: translate(-50%);
-  -ms-transform: translate(-50%);
-  -webkit-transform: translate(-50%);
-  transform: translate(-50%);
+:host ::ng-deep .card-a-row > *,
+:host ::ng-deep .card-a-row-reverse > * {
+  flex: 1 1;
 }
