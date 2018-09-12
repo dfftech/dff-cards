@@ -1,0 +1,31 @@
+:host {
+}
+.card-p {
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.card-p .parallax-img {
+  display: flex;
+  flex: 1 0 auto;
+  position: relative;
+  z-index: -1;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  transform: translateZ(-1px) scale(2);
+  background-image: none;
+  background-color: rgb(250, 228, 216);
+}
+.card-p .header-content {
+  padding: 8% 5%;
+  text-align: center;
+}
+.card-p .contentContainer {
+  position: relative;
+  display: block;
+  background-color: white;
+  z-index: 1;
+}

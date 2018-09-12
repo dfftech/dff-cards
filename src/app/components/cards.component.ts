@@ -9,8 +9,12 @@ import {
   selector: "dff-cards",
   template: `
   <div align="center">
+ 
+    <dff-card-b [video]="vedioCover" height="500px" dir="right bottom">
+      <h2> {{title}} </h2>
+    </dff-card-b>
     <dff-card-t>
-      <h2> Testing </h2>
+      <h2>  <i class="fa fa-user"></i>    </h2>
     </dff-card-t>
 
     <dff-card-t shadow="true" bg="#fefdf1" maxWidth="100%">
@@ -32,7 +36,7 @@ import {
 
       <div style="width: 25%">
         <dff-card-a dir="right">
-        <dff-card-i [src]="imgCover" > </dff-card-i>
+        <i class="fa fa-user" style="color: red "></i> 
         <div #text>
           <h3> {{title}} </h3>
         </div>
@@ -101,6 +105,9 @@ export class CardsComponent implements OnInit {
   constructor(private sanitizer: DomSanitizer) {}
   title = "Application ";
   imgCover = "https://d38y6a0t4hqpxx.cloudfront.net/images/july8-cover.jpg";
+
+  vedioCover =
+    "https://s3.ap-south-1.amazonaws.com/dl-web-assets/Digital_Lync_Landing_Page_Video.mp4";
 
   secureImg(img: any) {
     return this.sanitizer.bypassSecurityTrustResourceUrl(img);

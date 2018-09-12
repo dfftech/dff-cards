@@ -10,7 +10,7 @@ import {
   CardCModule
 } from "../lib/public_api";
 // import { CardAComponent } from "./components/card-a.component";
-import { CardBComponent } from "./components/card-b.component";
+// import { CardBComponent } from "./components/card-b.component";
 import { CardCComponent } from "./components/card-c.component";
 import { PrettyPrintPipe } from "./pipe/PrettyPrintPipe";
 import { CardsComponent } from "./components/cards.component";
@@ -18,7 +18,7 @@ import { CardsComponent } from "./components/cards.component";
 const appRoutes: Routes = [
   { path: "", component: CardsComponent },
   // { path: "card-a", component: CardAComponent },
-  { path: "card-b", component: CardBComponent },
+  // { path: "card-b", component: CardBComponent },
   { path: "card-c", component: CardCComponent }
 ];
 
@@ -26,7 +26,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     // CardAComponent,
-    CardBComponent,
+    // CardBComponent,
     CardCComponent,
     PrettyPrintPipe,
     CardsComponent
