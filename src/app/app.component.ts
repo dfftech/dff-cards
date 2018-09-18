@@ -8,11 +8,11 @@ import { Component } from "@angular/core";
   <nav>
   <a routerLink="/cards" routerLinkActive="active">cards</a>
   &nbsp; &nbsp;
-    <a routerLink="/card-a" routerLinkActive="active">card-a</a>
+    <a routerLink="/card-1" routerLinkActive="active">card-1</a>
     &nbsp; &nbsp;
-    <a routerLink="/card-b" routerLinkActive="active">card-b</a>
+    <a routerLink="/card-2" routerLinkActive="active">card-2</a>
     &nbsp; &nbsp;
-    <a routerLink="/card-c" routerLinkActive="active">card-c</a>
+    <a routerLink="/card-3" routerLinkActive="active">card-3</a>
   </nav>
 <hr/>
 <router-outlet></router-outlet>

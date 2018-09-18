@@ -1,7 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-
+import { PrismModule } from '@ngx-prism/core';
 import { AppComponent } from "./app.component";
 import {
   DffCardsModule,
@@ -34,9 +34,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    CardAModule,
-    CardBModule,
-    CardCModule,
+    PrismModule,
     DffCardsModule
   ],
   providers: [],
