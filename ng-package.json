@@ -1,11 +1,15 @@
 {
-    "$schema": "./node_modules/ng-packagr/package.schema.json",
-    "name": "dff-cards",
-    "version": "0.0.1",
-    "lib": {
-        "entryFile": "./src/lib/public_api.ts"
-    },
-    "whitelistedNonPeerDependencies": [
-      "angular", "core-js", "rxjs", "zone.js"
-    ]
-  }
+  "$schema": "./node_modules/ng-packagr/package.schema.json",
+  "name": "dff-cards",
+  "version": "0.0.1",
+  "lib": {
+    "entryFile": "./src/lib/public_api.ts"
+  },
+  "whitelistedNonPeerDependencies": [
+    "angular",
+    "core-js",
+    "rxjs",
+    "zone.js",
+    "ngx-prism"
+  ]
+}
