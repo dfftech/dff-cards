@@ -1,4 +1,5 @@
 import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
 import { CardAComponent } from "./components/card-a/card-a.component";
 import { CardBComponent } from "./components/card-b/card-b.component";
@@ -28,7 +29,7 @@ import { CardYComponent } from "./components/card-y/card-y.component";
 import { CardZComponent } from "./components/card-z/card-z.component";
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   declarations: [
     CardAComponent,
     CardBComponent,

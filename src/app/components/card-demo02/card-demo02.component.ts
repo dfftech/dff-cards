@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'dff-card-demo02',
-  templateUrl: './card-demo02.component.html',
-  styleUrls: ['./card-demo02.component.css']
+  selector: "dff-card-demo02",
+  templateUrl: "./card-demo02.component.html",
+  styleUrls: ["./card-demo02.component.css"]
 })
 export class CardDemo02Component implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
+  htmlContent1 = `
+    <dff-card-f [(inputData)]="formData" (outputEmitter)="formSubmit($event)"> </dff-card-f>
+  `;
 }

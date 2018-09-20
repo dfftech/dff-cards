@@ -1,5 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 import { RouterModule, Routes } from "@angular/router";
 import { PrismModule } from "@ngx-prism/core";
 import { AppComponent } from "./app.component";
@@ -180,7 +181,8 @@ const appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     PrismModule,
-    DffCardsModule
+    DffCardsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
