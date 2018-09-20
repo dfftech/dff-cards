@@ -37,7 +37,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
       .card-ab .carda {
         left: 50px;
         position: relative;
-        height: 160px;
+        height: 190px;
         border-radius: 10px;
         background-color: white;
         box-shadow: 0 2px 10px 0 rgba(194, 194, 194, 0.5);
