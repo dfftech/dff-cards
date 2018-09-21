@@ -1,4 +1,4 @@
-<div [class]="shadow == 'true' ? 'card-z-shadow' : 'card-z'" [style.background-color]="bg" [style.maxWidth]="maxWidth"
+<div [class]="shadow ? 'card-z-shadow' : 'card-z'" [style.background-color]="bg" [style.maxWidth]="maxWidth"
   [style.height]="height" [style.justifyContent]=AlignItems(align)>
   <ng-content></ng-content>
 </div>
