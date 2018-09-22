@@ -16,6 +16,8 @@ export class CardZComponent implements OnInit {
   maxWidth = "100%";
   @Input()
   height = "auto";
+  @Input()
+  radius = "0px";
 
   constructor() {}
 

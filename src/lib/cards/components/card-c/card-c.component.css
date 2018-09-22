@@ -1,0 +1,51 @@
+:host {
+  overflow: hidden;
+}
+.card-c {
+  display: flex;
+  position: relative;
+  align-items: center;
+  align-content: space-between;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 1em;
+}
+.card-c button,
+.card-c-reverse button {
+  height: 35px;
+  border-radius: 20px;
+  background-color: #1b5683;
+  color: #fff;
+  width: 150px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.card-c > * {
+  flex: 50%;
+  text-align: center;
+}
+.card-c-reverse {
+  display: flex;
+  align-items: center;
+  align-content: space-between;
+  justify-content: space-around;
+  padding: 1em;
+  flex-direction: row-reverse;
+}
+.card-c-reverse > * {
+  flex: 50%;
+  text-align: center;
+}
+s .card-c .ibox img {
+  height: auto;
+  width: 100%;
+  max-width: 300px;
+}
+@media screen and (max-width: 500px) {
+  .card-c {
+    flex-direction: column;
+  }
+  .card-c-reverse {
+    flex-direction: column;
+  }
+}
