@@ -1,3 +1,9 @@
-<p>
-  card-s works!
-</p>
+<div class="card-s">
+  <main>
+    <ng-content select="main"></ng-content>
+  </main>
+
+  <aside [style.height]="aheight" [style.width]="awidth">
+    <ng-content select="aside"></ng-content>
+  </aside>
+</div>

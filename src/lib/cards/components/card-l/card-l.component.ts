@@ -24,7 +24,9 @@ export class CardLComponent implements OnInit {
   @ContentChild("itemTempl")
   itemTmpl: TemplateRef<any>;
 
-  constructor() {}
+  constructor() {
+    console.log(this.inputData);
+  }
 
   ngOnInit() {}
 }

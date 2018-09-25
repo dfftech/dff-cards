@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
-  selector: 'dff-card-s',
-  templateUrl: './card-s.component.html',
-  styleUrls: ['./card-s.component.css']
+  selector: "dff-card-s",
+  templateUrl: "./card-s.component.html",
+  styleUrls: ["./card-s.component.css"]
 })
 export class CardSComponent implements OnInit {
+  @Input()
+  aheight: string = "200px";
 
-  constructor() { }
+  @Input()
+  awidth: string = "320px";
 
-  ngOnInit() {
-  }
+  constructor() {}
 
+  ngOnInit() {}
 }

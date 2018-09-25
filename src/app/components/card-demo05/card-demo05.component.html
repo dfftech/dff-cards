@@ -1,3 +1,14 @@
-<p>
-  card-demo05 works!
-</p>
+<aside>
+  <article> Template demo </article>
+  <main style="width: 100%">
+
+    <dff-card-l [inputData]="dataList" [gap]="4" type="grid">
+      <ng-template let-ele #itemTempl>
+        <dff-card-b img="https://d38y6a0t4hqpxx.cloudfront.net/images/july8-cover.jpg" height="200px">
+          <h3 style="margin: 8px"> {{ele.name}} </h3>
+        </dff-card-b>
+      </ng-template>
+    </dff-card-l>
+
+  </main>
+</aside>

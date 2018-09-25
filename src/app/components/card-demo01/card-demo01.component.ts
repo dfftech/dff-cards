@@ -9,6 +9,7 @@ export class CardDemo01Component implements OnInit {
   constructor() {}
   interpolate = { language: "language interpolated" };
   ngOnInit() {}
+
   htmlContent1 = `
     <dff-card-z> 
       <h2> 
