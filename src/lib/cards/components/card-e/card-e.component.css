@@ -1,6 +1,9 @@
 .question {
   border-bottom: 1px solid darkslategray;
 }
+.question:invalid {
+  border-bottom: 1px solid red;
+}
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
@@ -173,16 +176,17 @@ textarea:hover {
 }
 
 #submit:hover {
-  color: lightslategray;
-  background-color: #f1f5f9;
+  color: #f1f5f9;
+  background-color: cornflowerblue;
 }
 
 .card-e input.question:valid ~ input[type="submit"],
 textarea.question:valid ~ input[type="submit"] {
+  visibility: hidden;
   display: show;
 }
 
 .card-e input.question:invalid ~ input[type="submit"],
 textarea.question:invalid ~ input[type="submit"] {
-  display: show;
+  display: none;
 }

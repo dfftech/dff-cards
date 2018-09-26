@@ -2,7 +2,11 @@
   <article> Template demo </article>
   <main style="width: 100%">
 
-    <dff-card-e></dff-card-e>
+    <dff-card-e [(inputData)]="inputData" (outputEmitter)="outputEmitter($event)"></dff-card-e>
+
+    <div style="width: 100%" align="left">
+      <ngx-prism language="html" [code]="htmlContent1"> </ngx-prism>
+    </div>
 
   </main>
 </aside>
