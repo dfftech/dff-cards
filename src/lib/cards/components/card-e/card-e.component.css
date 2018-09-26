@@ -1,4 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:100, 300, 400);
+.question {
+  border-bottom: 1px solid darkslategray;
+}
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
@@ -48,7 +50,7 @@ textarea:focus::-ms-placeholder {
 
 input:hover::-webkit-input-placeholder,
 textarea:hover::-webkit-input-placeholder {
-  color: #e2dedb;
+  color: darkslategray;
   font-size: 0.875em;
 }
 
@@ -59,7 +61,7 @@ textarea:hover:focus::-webkit-input-placeholder {
 
 input:hover::-moz-placeholder,
 textarea:hover::-moz-placeholder {
-  color: #e2dedb;
+  color: darkslategray;
   font-size: 0.875em;
 }
 
@@ -70,7 +72,7 @@ textarea:hover:focus::-moz-placeholder {
 
 input:hover::placeholder,
 textarea:hover::placeholder {
-  color: #e2dedb;
+  color: darkslategray;
   font-size: 0.875em;
 }
 
@@ -81,7 +83,7 @@ textarea:hover:focus::placeholder {
 
 input:hover::placeholder,
 textarea:hover::placeholder {
-  color: #e2dedb;
+  color: darkslategray;
   font-size: 0.875em;
 }
 
@@ -90,38 +92,30 @@ textarea:hover::focus:-ms-placeholder {
   color: #cbc6c1;
 }
 
-body {
-  font-family: "Lato", sans-serif;
-  background: #e2dedb;
-  color: #b3aca7;
-}
-
 header {
   position: relative;
-  margin: 100px 0 25px 0;
-  font-size: 2.3em;
+  margin: 25px 0 25px 0;
+  font-size: 1.3em;
   text-align: center;
   letter-spacing: 7px;
 }
 
 #form {
   position: relative;
-  width: 320px;
-  margin: 50px auto 100px auto;
+  text-align: center;
 }
 
 input {
-  font-family: "Lato", sans-serif;
   font-size: 0.875em;
-  width: 470px;
+  width: 100%;
   height: 50px;
-  padding: 0px 15px 0px 15px;
+  padding: 0px 0px 0px 15px;
 
   background: transparent;
   outline: none;
   color: #726659;
 
-  border: solid 1px #b3aca7;
+  border: solid 1px #f1f5f9;
   border-bottom: none;
 
   transition: all 0.3s ease-in-out;
@@ -131,25 +125,25 @@ input {
 }
 
 input:hover {
-  background: #b3aca7;
-  color: #e2dedb;
+  background: #f1f5f9;
+  color: darkslategray;
 }
 
 textarea {
-  width: 470px;
-  max-width: 470px;
+  font-family: "Lato", sans-serif;
+  width: 100%;
+  max-width: 100%;
   height: 110px;
   max-height: 110px;
-  padding: 15px;
+  padding: 15px 0px 15px 15px;
 
   background: transparent;
   outline: none;
 
   color: #726659;
-  font-family: "Lato", sans-serif;
-  font-size: 0.875em;
+  font-size: 0.875em !important;
 
-  border: solid 1px #b3aca7;
+  border: solid 1px #f1f5f9;
 
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -158,29 +152,29 @@ textarea {
 }
 
 textarea:hover {
-  background: #b3aca7;
-  color: #e2dedb;
+  background: #f1f5f9;
+  color: darkslategray;
 }
 
 #submit {
-  width: 502px;
+  width: 48%;
 
   padding: 0;
-  margin: -5px 0px 0px 0px;
-
-  font-family: "Lato", sans-serif;
+  margin: 0px 0px 0px 0px;
   font-size: 0.875em;
-  color: #b3aca7;
 
   outline: none;
   cursor: pointer;
 
-  border: solid 1px #b3aca7;
+  border: solid 2px #f1f5f9;
   border-top: none;
+  color: #f1f5f9;
+  background-color: lightslategray;
 }
 
 #submit:hover {
-  color: #e2dedb;
+  color: lightslategray;
+  background-color: #f1f5f9;
 }
 
 .card-e input.question:valid ~ input[type="submit"],
@@ -190,5 +184,5 @@ textarea.question:valid ~ input[type="submit"] {
 
 .card-e input.question:invalid ~ input[type="submit"],
 textarea.question:invalid ~ input[type="submit"] {
-  display: none;
+  display: show;
 }

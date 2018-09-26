@@ -9,6 +9,9 @@ export class CardEComponent implements OnInit {
   @Input()
   inputData: any;
 
+  @Input()
+  color: any = "#778899";
+
   @Output()
   outputEmitter: EventEmitter<any> = new EventEmitter();
   constructor() {
