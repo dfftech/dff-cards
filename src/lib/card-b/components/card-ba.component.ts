@@ -357,7 +357,7 @@ export class CardBaComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.inputData)
+    // console.log(this.inputData)
 
   }
   onCardSelect() { if (this.inputData && this.inputData.data) { this.outputEmitter.emit(this.inputData.data) } }

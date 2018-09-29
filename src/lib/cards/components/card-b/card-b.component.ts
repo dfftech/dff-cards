@@ -22,9 +22,9 @@ export class CardBComponent implements OnInit {
   direction(val: string) {
     if (val) {
       let data = val.indexOf("left") > -1 ? "left" : null;
-      console.log(data);
+      // console.log(data);
       data = !data && val.indexOf("right") > -1 ? "right" : data;
-      console.log(data);
+      // console.log(data);
       switch (data) {
         case "left":
           return "flex-start";
