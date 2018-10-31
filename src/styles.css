@@ -5,3 +5,9 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
+.card-code {
+  background-color: lightslategray;
+  color: white;
+  width: 100%;
+  text-align: left;
+}

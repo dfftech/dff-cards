@@ -20,6 +20,8 @@ export class CardZComponent implements OnInit {
   radius = "0px";
   @Input()
   margin = "0px";
+  @Input()
+  padding = "0px";
 
   constructor() {}
 

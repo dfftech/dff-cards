@@ -19,8 +19,8 @@ export class CardDemo01Component implements OnInit {
   `;
 
   htmlContent2 = `
-  <dff-card-z shadow=true align="left">
-    <h2> <i class="fa fa-user"></i> </h2>
-  </dff-card-z>
+    <dff-card-z shadow=true dir="left" padding="0px 20px">
+      <h2> <i class="fa fa-user"></i> </h2>
+    </dff-card-z>
   `;
 }

@@ -1,6 +1,9 @@
 <div [style.margin]="margin">
   <div [class]="shadow ? 'card-z-shadow' : 'card-z'" [style.background-color]="bg" [style.maxWidth]="maxWidth"
     [style.height]="height" [style.borderRadius]="radius" [style.justifyContent]="direction(dir)" [style.alignItems]="align(dir)">
-    <ng-content></ng-content>
+    <span [style.padding]="padding">
+      <ng-content></ng-content>
+    </span>
+
   </div>
 </div>
