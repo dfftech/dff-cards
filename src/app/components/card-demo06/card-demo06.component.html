@@ -1,12 +1,13 @@
 <aside>
-  <article> Template demo </article>
+  <article> CARD 06 </article>
   <main style="width: 100%">
+    <dff-card-z shadow="true" margin="10px" bg="#f1f5f9">
+      <dff-card-e [(inputData)]="inputData" (outputEmitter)="outputEmitter($event)"></dff-card-e>
+    </dff-card-z>
 
-    <dff-card-e [(inputData)]="inputData" (outputEmitter)="outputEmitter($event)"></dff-card-e>
-
-    <div style="width: 100%" align="left">
+    <dff-card-z shadow="true" margin="10px" bg="#f1f5f9" height="200px" dir="left top">
       <ngx-prism language="html" [code]="htmlContent1"> </ngx-prism>
-    </div>
+    </dff-card-z>
 
   </main>
 </aside>

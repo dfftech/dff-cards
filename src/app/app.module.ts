@@ -4,17 +4,8 @@ import { FormsModule } from "@angular/forms";
 import { RouterModule, Routes } from "@angular/router";
 import { PrismModule } from "@ngx-prism/core";
 import { AppComponent } from "./app.component";
-import {
-  DffCardsModule,
-  CardAModule,
-  CardBModule,
-  CardCModule
-} from "../lib/public_api";
-// import { CardAComponent } from "./components/card-a.component";
-// import { CardBComponent } from "./components/card-b.component";
-import { CardCComponent } from "./components/card-c.component";
+import { DffCardsModule } from "../lib/public_api";
 import { PrettyPrintPipe } from "./pipe/PrettyPrintPipe";
-import { CardsComponent } from "./components/cards.component";
 import { CardDemo01Component } from "./components/card-demo01/card-demo01.component";
 import { CardDemo02Component } from "./components/card-demo02/card-demo02.component";
 import { CardDemo03Component } from "./components/card-demo03/card-demo03.component";
@@ -65,11 +56,7 @@ import { CardDemo47Component } from "./components/card-demo47/card-demo47.compon
 import { CardDemo48Component } from "./components/card-demo48/card-demo48.component";
 
 const appRoutes: Routes = [
-  { path: "", component: CardsComponent },
-  // { path: "card-a", component: CardAComponent },
-  // { path: "card-b", component: CardBComponent },
-  // { path: "card-c", component: CardCComponent }
-
+  { path: "", component: CardDemo01Component },
   { path: "card-demo01", component: CardDemo01Component },
   { path: "card-demo02", component: CardDemo02Component },
   { path: "card-demo03", component: CardDemo03Component },
@@ -123,11 +110,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    // CardAComponent,
-    // CardBComponent,
-    // CardCComponent,
     PrettyPrintPipe,
-    CardsComponent,
     CardDemo01Component,
     CardDemo02Component,
     CardDemo03Component,

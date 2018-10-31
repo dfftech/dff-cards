@@ -9,6 +9,6 @@
       maxlength="15" [ngModelOptions]="{standalone: true}">
     <textarea id="message" type="text" placeholder="MESSAGE" required class="question" [(ngModel)]="inputData.message"
       maxlength="500" [ngModelOptions]="{standalone: true}"></textarea>
-    <input id="submit" type="submit" value="SUBMIT" (click)="clickOnSubmit()" disabled="question.invalide">
+    <input id="submit" type="submit" value="SUBMIT" (click)="clickOnSubmit()">
   </form>
 </div>

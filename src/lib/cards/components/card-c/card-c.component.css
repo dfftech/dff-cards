@@ -1,5 +1,6 @@
 :host {
   overflow: hidden;
+  max-width: 100%;
 }
 .card-c {
   display: flex;
@@ -23,6 +24,7 @@
 .card-c > * {
   flex: 50%;
   text-align: center;
+  overflow: hidden;
 }
 .card-c-reverse {
   display: flex;

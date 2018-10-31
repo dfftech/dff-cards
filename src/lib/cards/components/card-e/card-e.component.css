@@ -182,7 +182,6 @@ textarea:hover {
 
 .card-e input.question:valid ~ input[type="submit"],
 textarea.question:valid ~ input[type="submit"] {
-  visibility: hidden;
   display: show;
 }
 
