@@ -10,6 +10,6 @@ export class CardDemo02Component implements OnInit {
 
   ngOnInit() {}
   htmlContent1 = `
-    <dff-card-f [(inputData)]="formData" (outputEmitter)="formSubmit($event)"> </dff-card-f>
+    <dff-card-f [(inputData)]="inputData" (outputEmitter)="outputEmitter($event)"> </dff-card-f>
   `;
 }

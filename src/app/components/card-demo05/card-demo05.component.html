@@ -4,7 +4,7 @@
 
     <dff-card-l [inputData]="dataList" [gap]="4" type="grid">
       <ng-template let-ele #itemTempl>
-        <dff-card-b img="https://d38y6a0t4hqpxx.cloudfront.net/images/july8-cover.jpg" height="200px">
+        <dff-card-b [img]="ele.img" height="200px" dir="top center">
           <h3 style="margin: 8px"> {{ele.name}} </h3>
         </dff-card-b>
       </ng-template>
