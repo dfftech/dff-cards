@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'dff-card-m',
-  templateUrl: './card-m.component.html',
-  styleUrls: ['./card-m.component.css']
+  selector: "dff-card-m",
+  templateUrl: "./card-m.component.html",
+  styleUrls: ["./card-m.component.css"]
 })
 export class CardMComponent implements OnInit {
+  toggle: boolean;
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  changeToggle() {
+    this.toggle = !this.toggle;
   }
-
 }

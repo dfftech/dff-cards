@@ -1,0 +1,81 @@
+:host {
+  overflow: hidden;
+}
+
+.card-m .nav .menu {
+  position: absolute;
+  right: -55px;
+  top: -55px;
+  z-index: 100;
+  width: 120px;
+  height: 120px;
+  background: #000;
+  opacity: 0.8;
+  border-radius: 50% 50% 50% 50%;
+  transition: 0.5s ease-in-out;
+  box-shadow: 0 0 0 0 #000, 0 0 0 0 #000;
+  cursor: pointer;
+  color: #f1f5f9;
+}
+.card-m .nav .hamburger {
+  position: absolute;
+  top: 80px;
+  left: 30px;
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  display: block;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  transition: 0.5s ease-in-out;
+}
+.card-m .nav .hamburger:after,
+.card-m .nav .hamburger:before {
+  transition: 0.5s ease-in-out;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.card-m .nav .hamburger:before {
+  top: -10px;
+}
+.card-m .nav .hamburger:after {
+  bottom: -10px;
+}
+.card-m .nav input {
+  display: none;
+}
+.card-m .nav input:checked + .menu {
+  box-shadow: 0 0 0 100vw #000, 0 0 0 100vh #000;
+  border-radius: 0;
+}
+.card-m .nav input:checked + .menu .hamburger {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.card-m .nav input:checked + .menu .hamburger:after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  bottom: 0;
+}
+.card-m .nav input:checked + .menu .hamburger:before {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  top: 0;
+}
+.card-m .nav input:checked + .menu + section {
+  opacity: 1;
+}
+.card-m .nav section {
+  z-index: 200;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.25s 0s ease-in-out;
+}

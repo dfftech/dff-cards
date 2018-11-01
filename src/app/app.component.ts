@@ -15,7 +15,7 @@ import { Component } from "@angular/core";
     <li> <a routerLink="/card-demo04" routerLinkActive="active">card-demo04</a> </li>
     <li> <a routerLink="/card-demo05" routerLinkActive="active">card-demo05</a> </li>
     <li> <a routerLink="/card-demo06" routerLinkActive="active">Simple Contact Form</a> </li>
-    <li> <a routerLink="/card-demo07" routerLinkActive="active">card-demo07</a> </li>
+    <li> <a routerLink="/card-demo07" routerLinkActive="active">Full Screen Menu</a> </li>
     <li> <a routerLink="/card-demo08" routerLinkActive="active">card-demo08</a> </li>
     <li> <a routerLink="/card-demo09" routerLinkActive="active">card-demo09</a> </li>
     <li> <a routerLink="/card-demo10" routerLinkActive="active">card-demo10</a> </li>
