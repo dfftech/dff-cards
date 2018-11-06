@@ -9,14 +9,14 @@ import { Component } from "@angular/core";
     <h4> DFF CARDS DEMO </h4>
     <hr />
     <ul> 
-    <li> <a routerLink="/card-demo01" routerLinkActive="active">card-demo01</a> </li>
+    <li> <a routerLink="/card-demo01" routerLinkActive="active">Template</a> </li>
     <li> <a routerLink="/card-demo02" routerLinkActive="active">Animation contact form</a> </li>
-    <li> <a routerLink="/card-demo03" routerLinkActive="active">card-demo03</a> </li>
-    <li> <a routerLink="/card-demo04" routerLinkActive="active">card-demo04</a> </li>
-    <li> <a routerLink="/card-demo05" routerLinkActive="active">card-demo05</a> </li>
+    <li> <a routerLink="/card-demo03" routerLinkActive="active">Responsive card</a> </li>
+    <li> <a routerLink="/card-demo04" routerLinkActive="active">Sticky Side</a> </li>
+    <li> <a routerLink="/card-demo05" routerLinkActive="active">Grid/Flex</a> </li>
     <li> <a routerLink="/card-demo06" routerLinkActive="active">Simple Contact Form</a> </li>
     <li> <a routerLink="/card-demo07" routerLinkActive="active">Full Screen Menu</a> </li>
-    <li> <a routerLink="/card-demo08" routerLinkActive="active">card-demo08</a> </li>
+    <li> <a routerLink="/card-demo08" routerLinkActive="active">Banner</a> </li>
     <li> <a routerLink="/card-demo09" routerLinkActive="active">card-demo09</a> </li>
     <li> <a routerLink="/card-demo10" routerLinkActive="active">card-demo10</a> </li>
     <li> <a routerLink="/card-demo11" routerLinkActive="active">card-demo11</a> </li>
