@@ -24,4 +24,19 @@ export class CardDemo05Component implements OnInit {
       img: "https://d38y6a0t4hqpxx.cloudfront.net/images/july8-cover.jpg"
     }
   ];
+
+  getHtmlContent1() {
+    return `
+    <dff-card-l [inputData]="dataList" [gap]="4" type="grid">
+      <ng-template let-ele #itemTempl>
+        <div style="display: flex">
+          <dff-card-c [img]="ele.img" height="200px" dir="top">
+            <h2>{{ ele.name }}</h2>
+          </dff-card-c>
+        </div>
+      </ng-template>
+    </dff-card-l>
+
+    `;
+  }
 }

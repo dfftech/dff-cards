@@ -14,8 +14,7 @@ import {
 export class CardLComponent implements OnInit {
   @Input()
   type: string = "flex";
-  @Input()
-  minFill: string = "300px";
+
   @Input()
   inputData: any[] = [];
   @Input()

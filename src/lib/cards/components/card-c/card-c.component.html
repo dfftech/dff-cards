@@ -1,9 +1,18 @@
-<div [class]='dir == "left" ? "card-c" : "card-c-reverse"'>
-  <div class="ibox">
+<div
+  [class]="dir == 'left' ? 'card-c' : 'card-c-reverse'"
+  [style.flexDirection]="dir == 'top' ? 'column' : ''"
+>
+  <div class="ibox" [style.height]="height">
     <dff-card-i [src]="img"> </dff-card-i>
   </div>
   <div class="box">
     <ng-content></ng-content>
-    <button *ngIf="buttonText" [style.backgroundColor]="buttonBg" (click)="onCardSelect()"> {{buttonText}}</button>
+    <button
+      *ngIf="buttonText"
+      [style.backgroundColor]="buttonBg"
+      (click)="onButtonClick()"
+    >
+      {{ buttonText }}
+    </button>
   </div>
 </div>

@@ -1,18 +1,16 @@
 <aside>
-  <article> card 03 </article>
+  <article>card 03</article>
   <main>
-    <dff-card-z shadow="true" padding="0">
-      <dff-card-c img="https://d38y6a0t4hqpxx.cloudfront.net/images/july8-cover.jpg" height="80px" dir="left">
-        <h2> <i class="fa fa-user"></i> Sample Text </h2>
-      </dff-card-c>
-    </dff-card-z>
+    <dff-card-c
+      img="https://d38y6a0t4hqpxx.cloudfront.net/images/july8-cover.jpg"
+      dir="left"
+      height="300px"
+    >
+      <h2><i class="fa fa-user"></i> Sample Text</h2>
+    </dff-card-c>
 
-
-    <div style="width: 100%" align="left">
-      <ngx-prism language="html" [code]=""> </ngx-prism>
+    <div class="card-code" style="width: 100%" left>
+      <ngx-prism language="html" [code]="getHtmlContent1()"> </ngx-prism>
     </div>
-
-
-
   </main>
 </aside>

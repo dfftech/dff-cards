@@ -16,7 +16,7 @@ export class CardCComponent implements OnInit {
   img: string;
 
   @Input()
-  dir: any = "left";
+  dir: any = "top";
 
   @Output()
   outputEmitter: EventEmitter<any> = new EventEmitter();
@@ -24,11 +24,14 @@ export class CardCComponent implements OnInit {
   @Input()
   outputData: any;
 
+  @Input()
+  height: string = "200px";
+
   constructor() {}
 
   ngOnInit() {}
 
-  onCardSelect() {
+  onButtonClick() {
     this.outputEmitter.emit(this.outputData);
   }
 }

@@ -9,7 +9,6 @@
   align-content: space-between;
   justify-content: space-around;
   flex-direction: row;
-  padding: 1em;
 }
 .card-c button,
 .card-c-reverse button {
@@ -38,10 +37,13 @@
   flex: 50%;
   text-align: center;
 }
-s .card-c .ibox img {
+.card-c .ibox,
+.card-c-reverse .ibox {
+  overflow: hidden;
+}
+.card-c .ibox img {
   height: auto;
   width: 100%;
-  max-width: 300px;
 }
 @media screen and (max-width: 500px) {
   .card-c {
