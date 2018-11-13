@@ -6,6 +6,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./card-demo01.component.css"]
 })
 export class CardDemo01Component implements OnInit {
+  img = "https://d38y6a0t4hqpxx.cloudfront.net/images/july8-cover.jpg";
   constructor() {}
   interpolate = { language: "language interpolated" };
   ngOnInit() {}

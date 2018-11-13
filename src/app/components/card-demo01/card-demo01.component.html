@@ -1,25 +1,20 @@
 <aside>
-  <article> Template demo </article>
+  <article>card 01</article>
   <main>
-    <dff-card-z>
-      <h2> <i class="fa fa-user"></i> </h2>
+    <dff-card-z [img]="img">
+      <h2><i class="fa fa-user"></i></h2>
     </dff-card-z>
 
     <div class="card-code">
       <ngx-prism language="html" [code]="htmlContent1"> </ngx-prism>
     </div>
 
-    <dff-card-z shadow=true dir="left" padding="0px 20px">
-      <h2> <i class="fa fa-user"></i> </h2>
+    <dff-card-z shadow="true" dir="left" padding="0px 20px">
+      <h2><i class="fa fa-user"></i></h2>
     </dff-card-z>
-
-
-
 
     <div class="card-code">
       <ngx-prism language="html" [code]="htmlContent2"> </ngx-prism>
     </div>
-
-
   </main>
 </aside>

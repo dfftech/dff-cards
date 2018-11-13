@@ -23,6 +23,9 @@ export class CardZComponent implements OnInit {
   @Input()
   padding = "0px";
 
+  @Input()
+  img: string;
+
   constructor() {}
 
   ngOnInit() {}

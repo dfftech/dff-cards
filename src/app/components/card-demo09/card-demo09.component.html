@@ -1,3 +1,32 @@
-<p>
-  card-demo09 works!
-</p>
+<aside>
+  <article>card 09</article>
+  <main>
+    <dff-card-a>
+      <i class="fa fa-user"></i>
+      <div>Sample text</div>
+    </dff-card-a>
+
+    <div class="card-code">
+      <ngx-prism language="html" [code]="htmlContent1"> </ngx-prism>
+    </div>
+
+    <dff-card-a dir="right">
+      <i class="fa fa-user"></i>
+      <div>Sample text</div>
+    </dff-card-a>
+
+    <div class="card-code">
+      <ngx-prism language="html" [code]="htmlContent2"> </ngx-prism>
+    </div>
+    <div style="width: 400px">
+      <dff-card-a dir="left" height="100px">
+        <dff-card-i [img]="img"></dff-card-i>
+        <div>Sample text</div>
+      </dff-card-a>
+    </div>
+
+    <div class="card-code">
+      <ngx-prism language="html" [code]="htmlContent3"> </ngx-prism>
+    </div>
+  </main>
+</aside>

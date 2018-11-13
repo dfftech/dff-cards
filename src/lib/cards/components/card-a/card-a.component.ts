@@ -9,6 +9,9 @@ import { Component, OnInit, Input, ViewEncapsulation } from "@angular/core";
 export class CardAComponent implements OnInit {
   @Input()
   dir: string = "card-a-column";
+
+  @Input()
+  height: string = "200px";
   constructor() {}
 
   ngOnInit() {}
