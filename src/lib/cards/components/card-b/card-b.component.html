@@ -1,9 +1,23 @@
 <div class="card-b" [style.height]="height">
-  <div class='landing'>
-    <img *ngIf="img" class="bgiv" [src]="img">
-    <video *ngIf="video" autoplay='true' loop='true' muted='true' poster='' [src]='video' class="bgiv"></video>
-    <div class='dim'></div>
-    <div class='text' [style.justifyContent]="direction(dir)" [style.alignItems]="align(dir)">
+  <div class="landing">
+    <img *ngIf="img" class="bgiv" [src]="img" />
+    <video
+      *ngIf="video"
+      autoplay
+      loop
+      muted
+      onloadedmetadata="this.muted = true"
+      [src]="video"
+      class="bgiv"
+    >
+      <source [src]="video" type="video/mp4" />
+    </video>
+    <div class="dim"></div>
+    <div
+      class="text"
+      [style.justifyContent]="direction(dir)"
+      [style.alignItems]="align(dir)"
+    >
       <ng-content></ng-content>
     </div>
   </div>

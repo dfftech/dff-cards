@@ -10,7 +10,7 @@ export class CardDemo08Component implements OnInit {
 
   ngOnInit() {}
   video: string =
-    "https://www.videobacks.com/static/preview/stock-video-premium-4k-video-loop-005-100170.mp4";
+    "https://s3.ap-south-1.amazonaws.com/tagbyair-vid/final+(1).mp4";
   img: string = "https://d38y6a0t4hqpxx.cloudfront.net/images/july8-cover.jpg";
   getHtmlContent1() {
     return `
