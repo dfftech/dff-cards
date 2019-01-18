@@ -1,3 +1,8 @@
+:host {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
 .card-r {
     display: flex;
     flex-direction: row;
@@ -76,7 +81,7 @@
     transform: rotate(-405deg);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
     .card-r .top-nav {
         flex-direction: row-reverse;
     }

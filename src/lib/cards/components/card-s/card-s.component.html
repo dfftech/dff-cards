@@ -1,9 +1,7 @@
 <div class="card-s">
-  <main>
-    <ng-content select="main"></ng-content>
-  </main>
+    <div class="main"><ng-content select="main"></ng-content></div>
 
-  <aside [style.height]="aheight" [style.width]="awidth">
-    <ng-content select="aside"></ng-content>
-  </aside>
+    <div class="aside" [style.height]="aheight" [style.width]="awidth">
+        <ng-content select="aside"></ng-content>
+    </div>
 </div>
