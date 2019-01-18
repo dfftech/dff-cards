@@ -1,0 +1,131 @@
+.card-r {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-r .top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 1em;
+}
+
+.card-r .menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.card-r .menu > li {
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.card-r .menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-r #menu-toggle {
+    display: none;
+}
+
+.card-r .menu-button,
+.card-r .menu-button::before,
+.card-r .menu-button::after {
+    display: block;
+    background-color: #444;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.card-r .menu-button::before {
+    content: "";
+    margin-top: -8px;
+}
+
+.card-r .menu-button::after {
+    content: "";
+    margin-top: 8px;
+}
+
+.card-r #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+.card-r #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+
+.card-r #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
+@media (max-width: 700px) {
+    .card-r .top-nav {
+        flex-direction: row-reverse;
+    }
+    .card-r .menu-button-container {
+        display: flex;
+    }
+    .card-r .menu {
+        position: absolute;
+        top: 0;
+        margin-top: 100px;
+        right: 0;
+        flex-direction: column;
+        min-width: 320px;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-r #menu-toggle ~ .menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .card-r #menu-toggle:checked ~ .menu li {
+        border: 1px solid #333;
+        height: 1.5em;
+        padding: 1em;
+        padding-top: 1.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .card-r .menu > li {
+        display: flex;
+        justify-content: flex-start;
+        margin: 0;
+        width: 100%;
+        color: white;
+        background-color: #222;
+        cursor: pointer;
+    }
+    .card-r .menu > li:not(:last-child) {
+        border-bottom: 1px solid #444;
+    }
+}
+.card-r button {
+    height: 35px;
+    border-radius: 20px;
+    background-color: #1b5683;
+    color: #fff;
+    width: 150px;
+    font-size: 16px;
+    cursor: pointer;
+}
